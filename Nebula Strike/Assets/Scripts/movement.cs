@@ -8,16 +8,33 @@ public class Boundary
 public class movement : MonoBehaviour
 {
     public float movementSpeed = 5;
+
     public Boundary boundary;
+
+    public GameObject playerShot;
+    public Transform shotSpawn1;
+    public float fireRate;
+    private float fireCooldown;
 
     // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
+    {
+        if(Input.GetButton("Fire1") && Time.time > fireCooldown)
+        {
+            fireCooldown = Time.time + fireRate;
+            shoot();
+        }
+    }
+    // Update is called once per frame
+    void shoot()
+    {
+        GameObject playerBullet = Instantiate(playerShot, shotSpawn1.position, shotSpawn1.rotation);
+    }
+    void FixedUpdate()
     {
         var playerBody = gameObject.GetComponent<Rigidbody2D>();
 

@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ShotMovement : MonoBehaviour
 {
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        var rb = gameObject.GetComponent<Rigidbody2D>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb.velocity = transform.up * speed;
     }
 }
