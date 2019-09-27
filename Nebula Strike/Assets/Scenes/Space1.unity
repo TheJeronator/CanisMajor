@@ -373,7 +373,6 @@ MonoBehaviour:
   shotSpawn1: {fileID: 1838282480}
   shotSpawn2: {fileID: 1702221398}
   fireRate: 0.2
-  fireCooldown: 0
   bulletSpeed: 20
 --- !u!1 &519420028
 GameObject:
