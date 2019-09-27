@@ -10,11 +10,8 @@ public class movement : MonoBehaviour
     public float movementSpeed = 5;
 
     public Boundary boundary;
-
-    public GameObject playerShot;
-    public Transform shotSpawn1;
-    public float fireRate;
-    private float fireCooldown;
+    public Camera cam;
+    Vector2 mousePos;
 
     // Start is called before the first frame update
     void Start()
@@ -23,29 +20,24 @@ public class movement : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetButton("Fire1") && Time.time > fireCooldown)
-        {
-            fireCooldown = Time.time + fireRate;
-            shoot();
-        }
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
     // Update is called once per frame
-    void shoot()
-    {
-        GameObject playerBullet = Instantiate(playerShot, shotSpawn1.position, shotSpawn1.rotation);
-    }
     void FixedUpdate()
     {
-        var playerBody = gameObject.GetComponent<Rigidbody2D>();
+        var playerRb = gameObject.GetComponent<Rigidbody2D>();
 
         float xmove = Input.GetAxis("Horizontal");
         float ymove = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(xmove, ymove, 0);
-        playerBody.velocity = movement * movementSpeed;
-        playerBody.position = new Vector3(
-           Mathf.Clamp(playerBody.position.x, boundary.xMin, boundary.xMax),
-           Mathf.Clamp(playerBody.position.y, boundary.yMin, boundary.yMax),
-           Mathf.Clamp(playerBody.position.y, boundary.yMin, boundary.yMax)
+        playerRb.velocity = movement * movementSpeed;
+        playerRb.position = new Vector3(
+           Mathf.Clamp(playerRb.position.x, boundary.xMin, boundary.xMax),
+           Mathf.Clamp(playerRb.position.y, boundary.yMin, boundary.yMax),
+           Mathf.Clamp(playerRb.position.y, boundary.yMin, boundary.yMax)
        );
+        Vector2 lookDir = mousePos - playerRb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        playerRb.rotation = angle;
     }
 }
