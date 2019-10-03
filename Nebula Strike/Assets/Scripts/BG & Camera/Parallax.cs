@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    float parallax = 3f;
+    float parallax = 2f;
 
     // Update is called once per frame
     void Update()
@@ -12,7 +12,7 @@ public class Parallax : MonoBehaviour
         MeshRenderer mr = GetComponent<MeshRenderer>();
         Material mt = mr.material;
         Vector2 offset = mt.mainTextureOffset;
-        offset.y = -transform.position.x / transform.localScale.x / parallax;
+        offset.y = -transform.position.x / -transform.localScale.x / -parallax;
         offset.x = transform.position.y / transform.localScale.y / parallax;
         mt.mainTextureOffset = offset;
     }
