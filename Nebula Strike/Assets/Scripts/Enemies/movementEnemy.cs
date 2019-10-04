@@ -6,14 +6,26 @@ public class movementEnemy : MonoBehaviour
 {
     public GameObject player;
 
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "player")
+        {
+           
+        }
+    }
     // Update is called once per frame
     void Update()
+    {
+      
+    }
+    void FixedUpdate()
     {
         var enemyRb = GetComponent<Rigidbody2D>();
 

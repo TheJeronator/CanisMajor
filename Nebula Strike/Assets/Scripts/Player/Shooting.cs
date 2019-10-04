@@ -26,13 +26,17 @@ public class Shooting : MonoBehaviour
     }
     void shoot()
     {
-       GameObject playerBullet = Instantiate(playerShot, shotSpawn1.position, shotSpawn1.rotation);
-       Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
-       bulletRb.AddForce(shotSpawn1.up * bulletSpeed, ForceMode2D.Impulse);
-       //
-       //
-        GameObject playerBullet2 = Instantiate(playerShot, shotSpawn2.position, shotSpawn2.rotation);
-        Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
-        bulletRb2.AddForce(shotSpawn2.up * bulletSpeed, ForceMode2D.Impulse);
+        if (GlobalsManager.Instance.mg1 == true)
+        {
+            GameObject playerBullet2 = Instantiate(playerShot, shotSpawn2.position, shotSpawn2.rotation);
+            Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
+            bulletRb2.AddForce(shotSpawn2.up * bulletSpeed, ForceMode2D.Impulse);
+        }
+        if (GlobalsManager.Instance.mg2 == true)
+        {
+            GameObject playerBullet = Instantiate(playerShot, shotSpawn1.position, shotSpawn1.rotation);
+            Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
+            bulletRb.AddForce(shotSpawn1.up * bulletSpeed, ForceMode2D.Impulse);
+        }
     }
 }
