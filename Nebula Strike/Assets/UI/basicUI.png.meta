@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 18316009c570a4e4d948cda2abb549bc
+guid: 59690d26ee8898b4b9eaa58c8256aa69
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spritesheet_0
-    21300002: Spritesheet_1
-    21300004: Spritesheet_2
-    21300006: Spritesheet_3
-    21300008: Spritesheet_4
-    21300010: Spritesheet_5
-    21300012: Spritesheet_6
-    21300014: Spritesheet_7
-    21300016: Spritesheet_8
+    21300000: basicUI_screen
+    21300002: basicUI_selected
+    21300004: basicUI_doubleShield
+    21300006: basicUI_Shotgun
+    21300008: basicUI_singleShield
+    21300010: basicUI_singleMG
+    21300012: basicUI_Cloak
+    21300014: basicUI_Cannon
+    21300016: basicUI_doubleMG
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_0
+      name: basicUI_screen
       rect:
         serializedVersion: 2
-        x: 644
-        y: 630
-        width: 28
-        height: 36
+        x: 0
+        y: 88
+        width: 180
+        height: 323
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,19 +140,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2a08e8f3173a0c42af3bbacfcae1a9d
+      spriteID: 243c5d823e8dd8949bdb2d56c0785a51
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_1
+      name: basicUI_selected
       rect:
         serializedVersion: 2
-        x: 621
-        y: 582
-        width: 75
-        height: 36
+        x: 374
+        y: 83
+        width: 66
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,19 +160,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71372f3cac2707c40819a9d6e4e2781b
+      spriteID: c5db70e4f65528946963bc293fea2886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_2
+      name: basicUI_doubleShield
       rect:
         serializedVersion: 2
-        x: 519
-        y: 307
-        width: 276
-        height: 269
+        x: 479
+        y: 98
+        width: 54
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,19 +180,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03280e88bbfa06147af4c01ad1916655
+      spriteID: fffeb5b631ffe7f49abfaa57649cb1eb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_3
+      name: basicUI_Shotgun
       rect:
         serializedVersion: 2
-        x: 549
-        y: 244
-        width: 38
-        height: 35
+        x: 1
+        y: 7
+        width: 57
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bea36058611f8664a824a1254c163d23
+      spriteID: 0b3d3d0bc2d727546a8f2c6c119b56e4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_4
+      name: basicUI_singleShield
       rect:
         serializedVersion: 2
-        x: 598
-        y: 253
-        width: 28
-        height: 26
+        x: 106
+        y: 2
+        width: 42
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,18 +220,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84ab92bac11b5084590632e13046f354
+      spriteID: 889fff8680d52084db65a7ccba64fd71
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_5
+      name: basicUI_singleMG
       rect:
         serializedVersion: 2
-        x: 639
-        y: 261
-        width: 45
+        x: 203
+        y: 5
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64eb5a42e675cf4d9eaab57c0468cab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: basicUI_Cloak
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 46
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -240,19 +260,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826ce7d7ec71a90409b0494c5b7032c9
+      spriteID: b32dbd9fed1febf48889302fca816e9c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_6
+      name: basicUI_Cannon
       rect:
         serializedVersion: 2
-        x: 692
-        y: 253
-        width: 26
-        height: 26
+        x: 401
+        y: 3
+        width: 20
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,19 +280,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebaa55ed2e1ba69468f24151d0f6d71d
+      spriteID: 4a7d2617594ddef45b570cda27ff87c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_7
+      name: basicUI_doubleMG
       rect:
         serializedVersion: 2
-        x: 734
-        y: 244
-        width: 32
-        height: 35
+        x: 477
+        y: 1
+        width: 56
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,27 +300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55a317018752bdc4dae5e287d1c26a01
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 107
-        width: 47
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf1867a290c8f94996f5ba20bf35a53
+      spriteID: fcec740fb1c13174aa6a2100f2ee300c
       vertices: []
       indices: 
       edges: []
@@ -308,7 +308,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cd650c77b75d21d40a8ddcf47b43e0b1
+    spriteID: 13932bd66e1823b488c45d9b33ebd280
     vertices: []
     indices: 
     edges: []

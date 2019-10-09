@@ -1,20 +1,15 @@
 fileFormatVersion: 2
-guid: e510420483c6e3c44ba4fd3233991e7b
+guid: 54804cbb84e537d4d85df2d356d845bf
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Asset 1_0
-    21300002: Asset 1_1
-    21300004: Asset 1_2
-    21300006: Asset 1_3
-    21300008: Asset 1_4
-    21300010: Asset 1_5
-    21300012: Asset 1_6
-    21300014: Asset 1_7
-    21300016: Asset 1_8
-    21300018: Asset 1_9
-    21300020: Asset 1_10
-    21300022: Asset 1_11
-    21300024: Asset 1_12
+    21300000: playerShip
+    21300002: machinegunLeft
+    21300004: Cannon
+    21300006: cloakingDevice
+    21300008: shotGun
+    21300010: machinegunRight
+    21300012: shieldLeft
+    21300014: shieldRight
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -130,261 +125,161 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 1_0
+      name: playerShip
       rect:
         serializedVersion: 2
-        x: 214
-        y: 523
-        width: 28
-        height: 36
+        x: 38
+        y: 229
+        width: 520
+        height: 603
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71204c0ce543d064f818a86cd3546a17
+      spriteID: c80d0de1af36e7d48b1ca85284305f60
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_1
+      name: machinegunLeft
       rect:
         serializedVersion: 2
-        x: 191
-        y: 475
-        width: 75
-        height: 36
+        x: 16
+        y: 40
+        width: 69
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1d68bc0b0e6ea4c817cdbb03781cbd
+      spriteID: 3b56ba281bb13c44b861dfc1a1eaded8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_2
+      name: Cannon
       rect:
         serializedVersion: 2
-        x: 0
-        y: 334
-        width: 50
-        height: 107
+        x: 127
+        y: 7
+        width: 63
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b61d2a22e019104689a09291b8bc7f9
+      spriteID: 367d4001b59d25f449ec8ec24683dfd0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_3
+      name: cloakingDevice
       rect:
         serializedVersion: 2
-        x: 89
-        y: 200
-        width: 276
-        height: 269
+        x: 263
+        y: 119
+        width: 60
+        height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0f66a0bd3559541b38c94b75b46b53
+      spriteID: 81c574a6adb0a704d85e0b4b989726e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_4
+      name: shotGun
       rect:
         serializedVersion: 2
-        x: 398
-        y: 338
-        width: 52
-        height: 102
+        x: 366
+        y: 94
+        width: 99
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34d52b257d3eb514ea46d0ed50b34c30
+      spriteID: e3ed5d989e2c7a448a9bf4bef4b2c543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_5
+      name: machinegunRight
       rect:
         serializedVersion: 2
-        x: 6
-        y: 265
-        width: 27
-        height: 41
+        x: 512
+        y: 40
+        width: 70
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba3a1bb73bf55f9498a40320ed71fe83
+      spriteID: 60a94fcf4bb7df04aa2182e99bd1b969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_6
+      name: shieldLeft
       rect:
         serializedVersion: 2
-        x: 428
-        y: 269
-        width: 27
-        height: 41
+        x: 292
+        y: 9
+        width: 40
+        height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1846bf6d6a226944f91df76d977bc4dc
+      spriteID: d82efda7938547d49a260e94992a7cc3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asset 1_7
+      name: shieldRight
       rect:
         serializedVersion: 2
-        x: 119
-        y: 137
-        width: 38
-        height: 35
+        x: 368
+        y: 13
+        width: 40
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75eb6370a39867c429f8f1e94f1466eb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 1_8
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 146
-        width: 28
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c8e19421143bc24cba6e591d7a12760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 1_9
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 154
-        width: 45
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d63f5621c4b05c0479f47b5d678b1991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 1_10
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 146
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffaa86be181ae624dae548a4a32971f4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 1_11
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 137
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96f1196664a979f4187036d05d31f715
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Asset 1_12
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 47
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e782539cbcce5854194cd7eb15e33bd4
+      spriteID: 7932d53df1f255e409cee363a6aa8f18
       vertices: []
       indices: 
       edges: []
@@ -392,7 +287,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62019beed2f005546b8f0454f78e8b0e
+    spriteID: 1d48f254c81e54e43af00d3c196837fa
     vertices: []
     indices: 
     edges: []

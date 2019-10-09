@@ -6,6 +6,7 @@ public class GlobalsManager : MonoBehaviour
 {
     public static GlobalsManager Instance { get; private set; }
 
+    public int playerHP = 100;
     public bool mg1 = false;
     public bool mg2 = false;
         // NEED TO ADD BOOLS FOR OTHER GUNS

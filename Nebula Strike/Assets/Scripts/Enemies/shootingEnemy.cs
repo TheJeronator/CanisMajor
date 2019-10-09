@@ -15,13 +15,17 @@ public class shootingEnemy : MonoBehaviour
     {
 
     }
-    void Update()
+    void OnTriggerStay2D(Collider2D collision)
     {
-        if (Time.time > fireCooldown)
+        if (collision.tag == "player" && Time.time > fireCooldown)
         {
             fireCooldown = Time.time + fireRate;
             shoot();
         }
+    }
+    void Update()
+    {
+
     }
     void shoot()
     {

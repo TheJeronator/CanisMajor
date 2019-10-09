@@ -8,6 +8,10 @@ TagManager:
   - enemy1
   - playerShot
   - enemyShot1
+  - mg1
+  - mg2
+  - cannon
+  - shotgun
   layers:
   - Default
   - TransparentFX

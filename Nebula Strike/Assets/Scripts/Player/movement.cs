@@ -21,6 +21,11 @@ public class movement : MonoBehaviour
     void Update()
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (GlobalsManager.Instance.playerHP == 0)
+        {
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

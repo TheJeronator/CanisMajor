@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ShipLayout : MonoBehaviour
 {
-    public Sprite machineGun1;
-    public Sprite machineGun2;
-    public Sprite Cloak;
-    public Sprite Shotgun;
-    public Sprite Cannon;
-    public Sprite shield1;
-    public Sprite shield2;
-    public Sprite tractorBeam;
+    public GameObject machineGun1;
+    public GameObject machineGun2;
+   // public GameObject Cloak;
+   // public GameObject Shotgun;
+   // public GameObject Cannon;
+   // public GameObject shield1;
+   // public GameObject shield2;
+   // public GameObject tractorBeam;
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +22,22 @@ public class ShipLayout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var sprite = GetComponent<SpriteRenderer>();
-
         if (GlobalsManager.Instance.mg1 == true)
         {
-            sprite.sprite = machineGun1;
+            machineGun1.GetComponent<SpriteRenderer>().enabled = true;
         }
         if (GlobalsManager.Instance.mg2 == true)
         {
-            sprite.sprite = machineGun2;
+            machineGun2.GetComponent<SpriteRenderer>().enabled = true;
+        }
+
+        else if (GlobalsManager.Instance.mg1 == false)
+        {
+            machineGun1.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else if (GlobalsManager.Instance.mg2 == false)
+        {
+            machineGun2.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }
