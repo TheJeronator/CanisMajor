@@ -15,7 +15,13 @@ public class CamTrack : MonoBehaviour
         offset = transform.position - Player.transform.position;
     }
 
-    
+    void Update()
+    {
+        if (GlobalsManager.Instance.playerHP == 0)
+        {
+            Destroy(this);
+        }
+    }
     void LateUpdate()
     {
         

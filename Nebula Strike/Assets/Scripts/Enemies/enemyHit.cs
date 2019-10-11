@@ -15,7 +15,11 @@ public class enemyHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            GlobalsManager.Instance.playerHP -= 5;
+            GlobalsManager.Instance.playerHP -= 20;
+            Destroy(gameObject);
+        }
+        else
+        {
             Destroy(gameObject);
         }
     }

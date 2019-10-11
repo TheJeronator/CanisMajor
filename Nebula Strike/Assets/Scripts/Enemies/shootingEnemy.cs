@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class shootingEnemy : MonoBehaviour
 {
+    public Transform player;
     public GameObject enemyShot;
     public Transform shotSpawnEnemy1;
     public float fireRate;
@@ -17,7 +18,7 @@ public class shootingEnemy : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "player" && Time.time > fireCooldown)
+        if (collision.tag == "player" && Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < 16f))
         {
             fireCooldown = Time.time + fireRate;
             shoot();

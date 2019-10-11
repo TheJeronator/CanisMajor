@@ -26,8 +26,11 @@ public class movementEnemy : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {        
-    
+    {
+        if (GlobalsManager.Instance.playerHP == 0)
+        {
+            Destroy(this);
+        }
     }
     void FixedUpdate()
     {

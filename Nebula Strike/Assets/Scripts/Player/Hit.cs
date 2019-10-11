@@ -17,5 +17,10 @@ public class Hit : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else
+        {
+        Destroy(gameObject);
+        }
+        
     }
 }
