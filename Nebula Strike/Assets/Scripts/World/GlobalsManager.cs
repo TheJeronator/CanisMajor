@@ -9,6 +9,9 @@ public class GlobalsManager : MonoBehaviour
     public int playerHP = 100;
     public bool mg1 = false;
     public bool mg2 = false;
+    public bool shotgun = false;
+    public bool cannon = false;
+    public bool shields = false;
         // NEED TO ADD BOOLS FOR OTHER GUNS
 
     private void Awake()

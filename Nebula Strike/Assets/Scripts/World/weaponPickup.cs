@@ -17,5 +17,15 @@ public class weaponPickup : MonoBehaviour
             GlobalsManager.Instance.mg2 = true;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "shotgun")
+        {
+            GlobalsManager.Instance.shotgun = true;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "cannon")
+        {
+            GlobalsManager.Instance.cannon = true;
+            Destroy(collision.gameObject);
+        }
     }
 }

@@ -10,6 +10,7 @@ TextureImporter:
     21300010: machinegunRight
     21300012: shieldLeft
     21300014: shieldRight
+    21300016: Player spaceship sprite (1)_0
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -131,7 +132,7 @@ TextureImporter:
         x: 38
         y: 229
         width: 520
-        height: 603
+        height: 556
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,6 +281,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7932d53df1f255e409cee363a6aa8f18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player spaceship sprite (1)_0
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 785
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4963670637fd9b54caeb24b8d98a8cde
       vertices: []
       indices: 
       edges: []

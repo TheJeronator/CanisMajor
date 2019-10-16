@@ -7,8 +7,8 @@ public class ShipLayout : MonoBehaviour
     public GameObject machineGun1;
     public GameObject machineGun2;
    // public GameObject Cloak;
-   // public GameObject Shotgun;
-   // public GameObject Cannon;
+    public GameObject shotGun;
+    public GameObject Cannon;
    // public GameObject shield1;
    // public GameObject shield2;
    // public GameObject tractorBeam;
@@ -30,6 +30,14 @@ public class ShipLayout : MonoBehaviour
         {
             machineGun2.GetComponent<SpriteRenderer>().enabled = true;
         }
+        if (GlobalsManager.Instance.shotgun == true)
+        {
+            shotGun.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        if (GlobalsManager.Instance.cannon == true)
+        {
+            Cannon.GetComponent<SpriteRenderer>().enabled = true;
+        }
 
         else if (GlobalsManager.Instance.mg1 == false)
         {
@@ -38,6 +46,14 @@ public class ShipLayout : MonoBehaviour
         else if (GlobalsManager.Instance.mg2 == false)
         {
             machineGun2.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else if (GlobalsManager.Instance.shotgun == false)
+        {
+            shotGun.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else if (GlobalsManager.Instance.cannon == false)
+        {
+            Cannon.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }
