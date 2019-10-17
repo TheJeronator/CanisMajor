@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2059253101279475314}
   - component: {fileID: 8469766585778582243}
   - component: {fileID: 4402483003077537995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerShot_Heavy
   m_TagString: playerShot
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6602676781070786767}
   - component: {fileID: 6602676781070786765}
   - component: {fileID: 606639975046940709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: New Sprite
   m_TagString: playerShot
   m_Icon: {fileID: 0}

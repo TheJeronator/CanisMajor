@@ -6,6 +6,7 @@ public class GlobalsManager : MonoBehaviour
 {
     public static GlobalsManager Instance { get; private set; }
 
+    public GameObject Inventory;
     public int playerHP = 100;
     public bool mg1 = false;
     public bool mg2 = false;
@@ -24,6 +25,16 @@ public class GlobalsManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+    public void Start()
+    {
+        Inventory.SetActive(false);
+    }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I)) {
+            Inventory.SetActive(!Inventory.activeSelf);
         }
     }
 }

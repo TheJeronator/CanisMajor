@@ -22,8 +22,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Physics.IgnoreCollision(playerShot.GetComponent<Collider>(), GetComponent<Collider>());
-        Physics.IgnoreCollision(cannonShot.GetComponent<Collider>(), GetComponent<Collider>());
+        
     }
     void Update()
     {
