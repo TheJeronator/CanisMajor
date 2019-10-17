@@ -3431,8 +3431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 100
-  mg1: 1
-  mg2: 1
+  mg1: 0
+  mg2: 0
   shotgun: 0
   cannon: 0
   shields: 0
@@ -4450,12 +4450,12 @@ PrefabInstance:
     - target: {fileID: 6571093427949402602, guid: a01eaeb5eba62dd45b59aa43dc78d9c7,
         type: 3}
       propertyPath: bulletSpeed
-      value: 0.3
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6571093427949402602, guid: a01eaeb5eba62dd45b59aa43dc78d9c7,
         type: 3}
       propertyPath: cannonBulletspeed
-      value: 0.15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6571093427949402603, guid: a01eaeb5eba62dd45b59aa43dc78d9c7,
         type: 3}

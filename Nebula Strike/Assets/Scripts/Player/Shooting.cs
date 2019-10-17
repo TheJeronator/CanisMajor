@@ -69,7 +69,7 @@ public class Shooting : MonoBehaviour
     {
         if (GlobalsManager.Instance.cannon == true)
         {
-            GameObject playerBullet = Instantiate(playerShot, shotSpawnShotgun2.position, shotSpawnShotgun2.rotation);
+            GameObject playerBullet = Instantiate(cannonShot, shotSpawnShotgun2.position, shotSpawnShotgun2.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnShotgun2.up * cannonBulletspeed, ForceMode2D.Impulse);
         }
