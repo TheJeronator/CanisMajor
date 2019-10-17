@@ -3227,6 +3227,7 @@ GameObject:
   - component: {fileID: 1401738657}
   - component: {fileID: 1401738656}
   - component: {fileID: 1401738655}
+  - component: {fileID: 1401738658}
   m_Layer: 0
   m_Name: Starfield 2
   m_TagString: Untagged
@@ -3242,8 +3243,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401738653}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.22, y: 0.129, z: 40.190002}
-  m_LocalScale: {x: 40.371273, y: 52.303074, z: 1.19952}
+  m_LocalPosition: {x: 0.16, y: 0.13, z: 40.190002}
+  m_LocalScale: {x: 40.371273, y: 51.868725, z: 1.19952}
   m_Children: []
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
@@ -3277,7 +3278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ce11439421e356478ab6a3d3f1474b7, type: 2}
+  - {fileID: 1595850067}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3305,6 +3306,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401738653}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1401738658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401738653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198ada6227b2f4c419bd5cbefdf722f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderFamily: UnlitTransparent
+  blendMode: 12
+  renderMode: 1
+  maskMode: 0
+  maskBehaviour: 0
+  overlayColor: {r: 1, g: 1, b: 1, a: 1}
+  overlayTexture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
+  overlayTextureOffset: {x: 0, y: 0}
+  overlayTextureScale: {x: 1, y: 1}
+  framebufferEnabled: 0
+  unifiedGrabEnabled: 0
+  shareMaterial: 0
+  blendMaterial: {fileID: 1595850067}
+  componentExtensionState:
+    extendedComponent: {fileID: 1401738656}
+    shaderProperties:
+    - name: _MainTex
+      type: 3
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
+    - name: _Color
+      type: 0
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 0}
 --- !u!1 &1442326936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,8 +3418,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442326936}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.22, y: 0.129, z: 41.3}
-  m_LocalScale: {x: 40.371273, y: 52.303074, z: 1.19952}
+  m_LocalPosition: {x: 0.16, y: 0.13, z: 41.3}
+  m_LocalScale: {x: 40.371273, y: 51.868725, z: 1.19952}
   m_Children: []
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
@@ -3431,10 +3472,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP: 100
-  mg1: 0
-  mg2: 0
-  shotgun: 0
-  cannon: 0
+  mg1: 1
+  mg2: 1
+  shotgun: 1
+  cannon: 1
   shields: 0
 --- !u!4 &1464614837
 Transform:
@@ -3468,6 +3509,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 224305301}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1595850067
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
+  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1613183368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4347118470448719794, guid: a659753c29a1e1841ba1f361c951a40a,
@@ -3826,8 +3897,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792737163}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.22, y: 0.129, z: 38.72}
-  m_LocalScale: {x: 40.371273, y: 52.303074, z: 1.19952}
+  m_LocalPosition: {x: 0.16, y: 0.13, z: 38.72}
+  m_LocalScale: {x: 40.371273, y: 51.868725, z: 1.19952}
   m_Children: []
   m_Father: {fileID: 519420032}
   m_RootOrder: 2
@@ -3851,7 +3922,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792737163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

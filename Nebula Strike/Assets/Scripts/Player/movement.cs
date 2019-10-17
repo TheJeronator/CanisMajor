@@ -30,6 +30,10 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GlobalsManager.Instance.shields == true)
+        {
+            movementSpeed = 3;
+        }
         var playerRb = gameObject.GetComponent<Rigidbody2D>();
 
         float xmove = Input.GetAxis("Horizontal");
