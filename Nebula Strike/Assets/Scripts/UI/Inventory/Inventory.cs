@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -7,6 +8,16 @@ public class Inventory : MonoBehaviour
     [SerializeField] List<Gun> guns;
     [SerializeField] Transform gunsParent;
     [SerializeField] gunSlot[] gunSlots;
+
+    public event Action<Gun> OnGunRightClickedEvent;
+
+    private void Awake()
+    {
+        for (int i = 0; i < gunSlots.Length; i++)
+        {
+            gunSlots[i].OnRightClickEvent += OnGunRightClickedEvent;
+        }
+    }
 
     private void OnValidate()
     {

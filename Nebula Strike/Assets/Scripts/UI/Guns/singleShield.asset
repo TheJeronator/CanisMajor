@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db4772b016362b346ad3395b9abab4c6, type: 3}
-  m_Name: singleMG
+  m_Name: singleShield
   m_EditorClassIdentifier: 
-  gunName: singleMG
-  Icon: {fileID: 21300010, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
-  WeaponNum: 0
+  gunName: singleShield
+  Icon: {fileID: 21300008, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
+  WeaponNum: 1

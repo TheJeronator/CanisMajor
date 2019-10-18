@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
-public class gunSlot : MonoBehaviour
+public class gunSlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image image;
+
+    public event Action<Gun> OnRightClickEvent;
 
     private Gun _gun;
     public Gun Gun
@@ -24,9 +28,16 @@ public class gunSlot : MonoBehaviour
             }
         }
     }
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData != null && eventData.button == PointerEventData.InputButton.Right)
+        {
+            if (Gun != null & OnRightClickEvent != null)
+                OnRightClickEvent(Gun);
+        }
+    }
 
-
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         {
             if (image == null)

@@ -29,6 +29,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemyShot1
       objectReference: {fileID: 0}
+    - target: {fileID: 7534498707799272201, guid: a847b39b9cd76c947b436ff720bc4a90,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3440027608246126273, guid: a847b39b9cd76c947b436ff720bc4a90,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -84,11 +89,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7534498707799272201, guid: a847b39b9cd76c947b436ff720bc4a90,
+    - target: {fileID: 3440027609420807606, guid: a847b39b9cd76c947b436ff720bc4a90,
         type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89cbb54f1944e6548bcb14be5f259d52,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114457766611890072, guid: a847b39b9cd76c947b436ff720bc4a90, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a847b39b9cd76c947b436ff720bc4a90, type: 3}
