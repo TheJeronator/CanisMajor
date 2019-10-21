@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParallaxMid : MonoBehaviour
 {
-    float parallax = 3f;
+    float parallax = 2f;
 
     // Update is called once per frame
     void Update()

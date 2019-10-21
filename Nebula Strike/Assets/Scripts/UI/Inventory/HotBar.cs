@@ -27,7 +27,7 @@ public class HotBar : MonoBehaviour
     {
         for (int i = 0; i< equipmentSlots.Length; i++)
         {
-            if (equipmentSlots[i].WeaponNum == gun.WeaponNum)
+            if (!equipmentSlots[i].Gun == gun)
             {
                 previousGun = (EquippableGun)equipmentSlots[i].Gun;
                 equipmentSlots[i].Gun = gun;

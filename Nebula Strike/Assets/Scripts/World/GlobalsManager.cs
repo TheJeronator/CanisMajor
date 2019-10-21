@@ -12,8 +12,22 @@ public class GlobalsManager : MonoBehaviour
     public bool mg2 = false;
     public bool shotgun = false;
     public bool cannon = false;
-    public bool shields = false;
-        // NEED TO ADD BOOLS FOR OTHER GUNS
+    public bool cloak = false;
+    public bool leftShield = false;
+    public bool rightShield = false;
+    public bool tractorBeam = false;
+
+    public enum guns
+    {
+        singleMG = 0,
+        doubleMG = 1,
+        shotgun = 2,
+        cannon = 3,
+        cloakingDevice = 4,
+        singleShield = 5,
+        doubleShield = 6,
+        tractorBeam = 7,
+    }
 
     private void Awake()
     {

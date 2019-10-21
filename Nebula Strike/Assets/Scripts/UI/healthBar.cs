@@ -5,18 +5,23 @@ using UnityEngine.UI;
 
 public class healthBar : MonoBehaviour
 {
-    public Text textbox;
+    Image healthbarSprite;
+    public float maxHealth = 100;
+    public static float HP;
 
     void Start()
     {
-        textbox = GetComponent<Text>();
+        healthbarSprite = GetComponent<Image>();
+        HP = maxHealth;
     }
 
     void Update()
     {
-        textbox.text = "Health: " + GlobalsManager.Instance.playerHP;
+         HP = GlobalsManager.Instance.playerHP;
+    }
 
-        if (GlobalsManager.Instance.playerHP <= 0)
-            Destroy(gameObject);
+    private void FixedUpdate()
+    {
+        healthbarSprite.fillAmount = HP / maxHealth;
     }
 }

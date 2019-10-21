@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunName: doubleShield
   Icon: {fileID: 21300004, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
-  WeaponNum: 1
+  WeaponNum: 0

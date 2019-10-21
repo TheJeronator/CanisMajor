@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WeaponNum
+public enum WeaponNum // maybe remove later
 {
     Weapon1,
     Weapon2, 
