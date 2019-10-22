@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] Inventory inventory;
     [SerializeField] HotBar HotBar;
 
+
     private void Awake()
     {
         inventory.OnGunRightClickedEvent += EquipFromInventory;

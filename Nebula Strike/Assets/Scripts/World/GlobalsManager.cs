@@ -17,6 +17,11 @@ public class GlobalsManager : MonoBehaviour
     public bool rightShield = false;
     public bool tractorBeam = false;
 
+    public bool mg1notYetAdded = true;
+    public bool mg2notYetAdded = true;
+    public bool shotgunnotYetAdded = true;
+    public bool cannonnotYetAdded = true;
+
     public enum guns
     {
         singleMG = 0,

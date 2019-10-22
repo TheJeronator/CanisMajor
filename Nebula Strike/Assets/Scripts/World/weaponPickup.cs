@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class weaponPickup : MonoBehaviour
 {
+    public int Gunswitch;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "mg1")
+        switch (Gunswitch)
         {
-            GlobalsManager.Instance.mg1 = true;
-            Destroy(collision.gameObject);
+            case 1:
+                GlobalsManager.Instance.mg1 = true;
+                Destroy(gameObject);
+                Debug.Log("mg1");
+                break;
+            case 2:
+                GlobalsManager.Instance.mg2 = true;
+                Destroy(gameObject);
+                Debug.Log("mg2");
+                break;
+            case 3:
+                GlobalsManager.Instance.shotgun = true;
+                Destroy(gameObject);
+                Debug.Log("shotgun");
+                break;
+            case 4:
+                GlobalsManager.Instance.cannon = true;
+                Destroy(gameObject);
+                Debug.Log("cannon");
+                break;
         }
-        if (collision.gameObject.tag == "mg2")
-        {
-            GlobalsManager.Instance.mg2 = true;
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "shotgun")
-        {
-            GlobalsManager.Instance.shotgun = true;
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "cannon")
-        {
-            GlobalsManager.Instance.cannon = true;
-            Destroy(collision.gameObject);
         }
     }
-}

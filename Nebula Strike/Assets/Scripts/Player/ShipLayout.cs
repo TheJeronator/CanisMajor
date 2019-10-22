@@ -16,7 +16,7 @@ public class ShipLayout : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,36 +24,36 @@ public class ShipLayout : MonoBehaviour
     {
         if (GlobalsManager.Instance.mg1 == true)
         {
-            machineGun1.GetComponent<SpriteRenderer>().enabled = true;
+            
         }
         if (GlobalsManager.Instance.mg2 == true)
         {
-            machineGun2.GetComponent<SpriteRenderer>().enabled = true;
+           
         }
         if (GlobalsManager.Instance.shotgun == true)
         {
-            shotGun.GetComponent<SpriteRenderer>().enabled = true;
+            
         }
         if (GlobalsManager.Instance.cannon == true)
         {
-            Cannon.GetComponent<SpriteRenderer>().enabled = true;
+            
         }
 
         else if (GlobalsManager.Instance.mg1 == false)
         {
-            machineGun1.GetComponent<SpriteRenderer>().enabled = false;
+           
         }
         else if (GlobalsManager.Instance.mg2 == false)
         {
-            machineGun2.GetComponent<SpriteRenderer>().enabled = false;
+            
         }
         else if (GlobalsManager.Instance.shotgun == false)
         {
-            shotGun.GetComponent<SpriteRenderer>().enabled = false;
+            
         }
         else if (GlobalsManager.Instance.cannon == false)
         {
-            Cannon.GetComponent<SpriteRenderer>().enabled = false;
+           
         }
     }
 }
