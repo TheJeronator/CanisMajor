@@ -5,4 +5,5 @@ public class Gun : ScriptableObject
 {
     public string gunName;
     public Sprite Icon;
+    public bool IsEquipped;
 }

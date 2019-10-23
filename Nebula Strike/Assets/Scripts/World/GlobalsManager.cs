@@ -22,6 +22,11 @@ public class GlobalsManager : MonoBehaviour
     public bool shotgunnotYetAdded = true;
     public bool cannonnotYetAdded = true;
 
+    public bool mg1Equipped = false;
+    public bool mg2Equipped = false;
+    public bool shotgunEquipped = false;
+    public bool cannonEquipped = false;
+
     public enum guns
     {
         singleMG = 0,

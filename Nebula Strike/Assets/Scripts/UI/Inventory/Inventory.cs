@@ -106,6 +106,7 @@ public class Inventory : MonoBehaviour
         {
             refreshUI();
             return true;
+            
         }
         return false;
     }
@@ -114,4 +115,5 @@ public class Inventory : MonoBehaviour
     {
         return guns.Count >= gunSlots.Length;
     }
+    
 }

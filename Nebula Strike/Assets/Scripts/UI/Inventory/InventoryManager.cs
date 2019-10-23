@@ -27,6 +27,24 @@ public class InventoryManager : MonoBehaviour
         if (gun is EquippableGun)
         {
             Unequip((EquippableGun)gun);
+            switch (gun.gunName)
+            {
+                case "singleMG":
+                    if (GlobalsManager.Instance.mg2Equipped == false)
+                    {
+                        GlobalsManager.Instance.mg1Equipped = false;
+                    }
+                    break;
+                case "doubleMG":
+                    GlobalsManager.Instance.mg2Equipped = false;
+                    break;
+                case "shotGun":
+                    GlobalsManager.Instance.shotgunEquipped = false;
+                    break;
+                case "cannon":
+                    GlobalsManager.Instance.cannonEquipped = false;
+                    break;
+            }
         }
     }
     public void Equip(EquippableGun gun)
@@ -36,9 +54,25 @@ public class InventoryManager : MonoBehaviour
         EquippableGun previousGun;
         if (HotBar.AddGun(gun, out previousGun))
             {
+                switch (gun.gunName)
+                {
+                    case "singleMG":
+                        GlobalsManager.Instance.mg1Equipped = true;
+                        break;
+                    case "doubleMG":
+                        GlobalsManager.Instance.mg2Equipped = true;
+                        break;
+                    case "shotGun":
+                        GlobalsManager.Instance.shotgunEquipped = true;
+                        break;
+                    case "cannon":
+                        GlobalsManager.Instance.cannonEquipped = true;
+                        break;
+                }
                 if (previousGun != null)
                 {
                     inventory.AddGun(previousGun);
+
                 }
             }
         else

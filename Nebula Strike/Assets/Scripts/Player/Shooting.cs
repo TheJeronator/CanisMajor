@@ -39,19 +39,19 @@ public class Shooting : MonoBehaviour
     }
     private void shoot()
     {
-        if (GlobalsManager.Instance.mg1 == true)
+        if (GlobalsManager.Instance.mg1Equipped == true)
         {
             GameObject playerBullet2 = Instantiate(playerShot, shotSpawnMGLeft.position, shotSpawnMGLeft.rotation);
             Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
             bulletRb2.AddForce(shotSpawnMGLeft.up * bulletSpeed, ForceMode2D.Impulse);
         }
-        if (GlobalsManager.Instance.mg2 == true)
+        if (GlobalsManager.Instance.mg2Equipped == true)
         {
             GameObject playerBullet = Instantiate(playerShot, shotSpawnMGRight.position, shotSpawnMGRight.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnMGRight.up * bulletSpeed, ForceMode2D.Impulse);
         }
-        if (GlobalsManager.Instance.shotgun == true)
+        if (GlobalsManager.Instance.shotgunEquipped == true)
         {
             GameObject playerBullet = Instantiate(playerShot, shotSpawnShotgun1.position, shotSpawnShotgun1.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
@@ -67,7 +67,7 @@ public class Shooting : MonoBehaviour
     }
     private void shootHeavy()
     {
-        if (GlobalsManager.Instance.cannon == true)
+        if (GlobalsManager.Instance.cannonEquipped == true)
         {
             GameObject playerBullet = Instantiate(cannonShot, shotSpawnShotgun2.position, shotSpawnShotgun2.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();

@@ -30,10 +30,6 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (GlobalsManager.Instance.leftShield == true && GlobalsManager.Instance.rightShield == true)
-        {
-            movementSpeed = 3;
-        }
 
         var playerRb = gameObject.GetComponent<Rigidbody2D>();
 
