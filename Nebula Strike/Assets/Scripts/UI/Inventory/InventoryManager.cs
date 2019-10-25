@@ -36,6 +36,7 @@ public class InventoryManager : MonoBehaviour
                     }
                     break;
                 case "doubleMG":
+                    GlobalsManager.Instance.mg1Equipped = false;
                     GlobalsManager.Instance.mg2Equipped = false;
                     break;
                 case "shotGun":
@@ -60,6 +61,7 @@ public class InventoryManager : MonoBehaviour
                         GlobalsManager.Instance.mg1Equipped = true;
                         break;
                     case "doubleMG":
+                        GlobalsManager.Instance.mg1Equipped = true;
                         GlobalsManager.Instance.mg2Equipped = true;
                         break;
                     case "shotGun":

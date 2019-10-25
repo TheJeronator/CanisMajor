@@ -16,22 +16,21 @@ public class shootingEnemy : MonoBehaviour
     {
 
     }
-    void OnTriggerStay2D(Collider2D collision)
+    void Update()
     {
-        if (collision.tag == "player" && Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < 16f))
+        if (Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < 25f))
         {
             fireCooldown = Time.time + fireRate;
             shoot();
         }
     }
-    void Update()
-    {
-
-    }
     void shoot()
     {
         GameObject playerBullet = Instantiate(enemyShot, shotSpawnEnemy1.position, shotSpawnEnemy1.rotation);
         Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
-        bulletRb.AddForce(shotSpawnEnemy1.up * bulletSpeed, ForceMode2D.Impulse);
+        Vector2 lookDir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        bulletRb.rotation = angle;
+        bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }

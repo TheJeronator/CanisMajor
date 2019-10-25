@@ -22,36 +22,36 @@ public class ShipLayout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalsManager.Instance.mg1 == true)
+        if (GlobalsManager.Instance.mg1Equipped == true)
         {
             
         }
-        if (GlobalsManager.Instance.mg2 == true)
+        if (GlobalsManager.Instance.mg2Equipped == true)
         {
            
         }
-        if (GlobalsManager.Instance.shotgun == true)
+        if (GlobalsManager.Instance.shotgunEquipped == true)
         {
             
         }
-        if (GlobalsManager.Instance.cannon == true)
+        if (GlobalsManager.Instance.cannonEquipped == true)
         {
             
         }
 
-        else if (GlobalsManager.Instance.mg1 == false)
+        else if (GlobalsManager.Instance.mg1Equipped == false)
         {
            
         }
-        else if (GlobalsManager.Instance.mg2 == false)
+        else if (GlobalsManager.Instance.mg2Equipped == false)
         {
             
         }
-        else if (GlobalsManager.Instance.shotgun == false)
+        else if (GlobalsManager.Instance.shotgunEquipped == false)
         {
             
         }
-        else if (GlobalsManager.Instance.cannon == false)
+        else if (GlobalsManager.Instance.cannonEquipped == false)
         {
            
         }
