@@ -13,12 +13,24 @@ public class weaponPickup : MonoBehaviour
             switch (Gunswitch)
             {
                 case 1:
-                    GlobalsManager.Instance.mg1 = true;
+                    if (GlobalsManager.Instance.mg1 == true)
+                    {
+                        GlobalsManager.Instance.mg2 = true;
+                    } else
+                    {
+                        GlobalsManager.Instance.mg1 = true;
+                    }
                     Destroy(gameObject);
                     Debug.Log("mg1");
                     break;
                 case 2:
-                    GlobalsManager.Instance.mg2 = true;
+                    if (GlobalsManager.Instance.mg1 == false)
+                    {
+                        GlobalsManager.Instance.mg1 = true;
+                    } else
+                    {
+                        GlobalsManager.Instance.mg2 = true;
+                    }
                     Destroy(gameObject);
                     Debug.Log("mg2");
                     break;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class movementEnemy : MonoBehaviour
 {
@@ -14,30 +15,20 @@ public class movementEnemy : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.tag == "player")
-        {
-            if (Vector3.Distance(transform.position, target.position) > 8f)
-            {
-                transform.Translate(new Vector3(0, movementSpeed * Time.deltaTime, 0));
-            }
-        }
-    }
+    
     // Update is called once per frame
     void Update()
     {
+        var pathDest = GetComponent<AIDestinationSetter>();
+        pathDest.target = null;
         if (GlobalsManager.Instance.playerHP == 0)
         {
             Destroy(this);
         }
+        if (Vector3.Distance(transform.position, target.position) < 30f)
+        {
+            pathDest.target = target;
+        }
     }
-    void FixedUpdate()
-    {
-        var enemyRb = GetComponent<Rigidbody2D>();
 
-        Vector2 lookDir = player.transform.position - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        enemyRb.rotation = angle;
-    }
 }

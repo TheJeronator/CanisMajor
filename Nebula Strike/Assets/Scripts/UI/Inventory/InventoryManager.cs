@@ -89,5 +89,6 @@ public class InventoryManager : MonoBehaviour
         {
             inventory.AddGun(gun);
         }
+
     }
 }

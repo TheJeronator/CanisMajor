@@ -57,6 +57,23 @@ public class Inventory : MonoBehaviour
                 GlobalsManager.Instance.cannonnotYetAdded = false;
             }
         }
+        if (GlobalsManager.Instance.mg1 == true && GlobalsManager.Instance.mg2 == true && GlobalsManager.Instance.mg1Equipped == false)
+        {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
+            {
+                if (guns[i] != null)
+                {
+                    var mg = guns[i];
+                    Debug.Log(mg);
+                    if (mg.gunName == "singleMG")
+                    {
+                        RemoveGun(mg);
+                        GlobalsManager.Instance.mg1 = false;
+                        break;
+                    }
+                }
+            }
+        }
     }
     private void Awake()
     {

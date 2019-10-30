@@ -18,7 +18,23 @@ public class HotBar : MonoBehaviour
             equipmentSlots[i].OnRightClickEvent += OnGunRightClickedEvent;
         }
     }
-
+    private void Update()
+    {
+        if (GlobalsManager.Instance.mg1 == true && GlobalsManager.Instance.mg2 == true && GlobalsManager.Instance.mg1Equipped == true)
+        {
+            for (int i = 0; i < equipmentSlots.Length; i++)
+            {
+                if (equipmentSlots[i].Gun != null)
+                {
+                    var mg = equipmentSlots[i].Gun;
+                    if (mg.gunName == "singleMG")
+                    {
+                        equipmentSlots[i].Gun = null;
+                    }
+                }
+            }
+        }
+    }
     private void OnValidate()
     {
         equipmentSlots = equipmentSlotsParent.GetComponentsInChildren<EquipmentSlot>();

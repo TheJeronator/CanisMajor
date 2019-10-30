@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Contact : MonoBehaviour
 {
+    private int hp = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,11 @@ public class Contact : MonoBehaviour
     {
         if (collision.gameObject.tag == "playerShot")
         {
-            Destroy(gameObject);
+            hp -= 25;
+            if (hp == 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ public class ShipLayout : MonoBehaviour
     {
         if (GlobalsManager.Instance.mg1Equipped == true)
         {
-            
+            machineGun1.active = true;
         }
         if (GlobalsManager.Instance.mg2Equipped == true)
         {
