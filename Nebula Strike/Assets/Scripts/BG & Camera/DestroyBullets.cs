@@ -18,6 +18,7 @@ public class DestroyBullets : MonoBehaviour
         if (interval < Time.time - timestamp)
         {
             Destroy(gameObject);  // destroy the bullet after {interval} seconds
+            Debug.Log("Destroyed");
         }
     }
 }

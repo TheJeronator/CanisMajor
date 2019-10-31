@@ -16,6 +16,11 @@ TagManager:
   - beam
   - leftshield
   - rightshield
+  - enemy2
+  - enemyRocket
+  - enemy3
+  - playerShotHeavy
+  - enemyEMP
   layers:
   - Default
   - TransparentFX
@@ -27,9 +32,9 @@ TagManager:
   - 
   - Bullets
   - Player
-  - 
-  - 
-  - 
+  - Rockets
+  - enemies
+  - enemyBullets
   - 
   - 
   - 

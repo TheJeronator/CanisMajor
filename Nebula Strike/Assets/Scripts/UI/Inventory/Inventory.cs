@@ -20,81 +20,109 @@ public class Inventory : MonoBehaviour
         if (GlobalsManager.Instance.mg1notYetAdded == true && GlobalsManager.Instance.mg1 == true)
         {
             {
-                guns[0] = gunsList[0];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.mg1notYetAdded = false;
+                for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
+                {
+                    if (guns[i] == null)
+                    {
+                        guns[i] = gunsList[0];
+                        refreshUI();
+                        GlobalsManager.Instance.mg1notYetAdded = false;
+                        break;
+                    }
+                }
             }
         }
         if (GlobalsManager.Instance.mg2notYetAdded == true && GlobalsManager.Instance.mg2 == true)
         {
             {
-                guns[1] = gunsList[1];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.mg2notYetAdded = false;
+                for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
+                {
+                    if (guns[i] == null)
+                    {
+                        guns[i] = gunsList[1];
+                        refreshUI();
+                        GlobalsManager.Instance.mg2notYetAdded = false;
+                        break;
+                    }
+                }
             }
         }
         if (GlobalsManager.Instance.shotgunnotYetAdded == true && GlobalsManager.Instance.shotgun == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[2] = gunsList[2];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.shotgunnotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[2];
+                    refreshUI();
+                    GlobalsManager.Instance.shotgunnotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.cannonnotYetAdded == true && GlobalsManager.Instance.cannon == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[3] = gunsList[3];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.cannonnotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[3];
+                    refreshUI();
+                    GlobalsManager.Instance.cannonnotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.cloaknotYetAdded == true && GlobalsManager.Instance.cloak == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[4] = gunsList[4];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.cloaknotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[4];
+                    refreshUI();
+                    GlobalsManager.Instance.cloaknotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.tractorbeamnotYetAdded == true && GlobalsManager.Instance.tractorBeam == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[5] = gunsList[5];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.tractorbeamnotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[5];
+                    refreshUI();
+                    GlobalsManager.Instance.tractorbeamnotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.leftshieldnotYetAdded == true && GlobalsManager.Instance.leftShield == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[6] = gunsList[6];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.leftshieldnotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[6];
+                    refreshUI();
+                    GlobalsManager.Instance.leftshieldnotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.rightshieldnotYetAdded == true && GlobalsManager.Instance.rightShield == true)
         {
+            for (int i = 0; i < guns.Count && i < gunSlots.Length; i++)
             {
-                guns[7] = gunsList[7];
-                Debug.Log(guns);
-                Debug.Log(gunsList);
-                refreshUI();
-                GlobalsManager.Instance.rightshieldnotYetAdded = false;
+                if (guns[i] == null)
+                {
+                    guns[i] = gunsList[7];
+                    refreshUI();
+                    GlobalsManager.Instance.rightshieldnotYetAdded = false;
+                    break;
+                }
             }
         }
         if (GlobalsManager.Instance.mg1 == true && GlobalsManager.Instance.mg2 == true && GlobalsManager.Instance.mg1Equipped == false)

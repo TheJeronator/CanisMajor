@@ -9,6 +9,10 @@ public class GlobalsManager : MonoBehaviour
     public GameObject Inventory;
     public int playerHP = 100;
     public float spottingrange = 30f;
+    public float sniperRange = 40f;
+    public movement playerMovement;
+    public Shooting playerShooting;
+    public Rigidbody2D playerRB;
     public bool mg1 = false;
     public bool mg2 = false;
     public bool shotgun = false;
@@ -64,6 +68,17 @@ public class GlobalsManager : MonoBehaviour
     {
         Inventory.SetActive(false);
     }
+    IEnumerator disableMoveAndShoot()
+    {
+        playerMovement.enabled = false;
+        playerShooting.enabled = false;
+        playerRB.velocity = new Vector2(0, 0);
+
+        yield return new WaitForSeconds(3f);
+
+        playerShooting.enabled = true;
+        playerMovement.enabled = true;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.I)) {
@@ -72,10 +87,12 @@ public class GlobalsManager : MonoBehaviour
         if (GlobalsManager.Instance.cloakEquipped == true)
         {
             GlobalsManager.Instance.spottingrange = 15f;
+            GlobalsManager.Instance.sniperRange = 20f;
         }
         else
         {
             GlobalsManager.Instance.spottingrange = 30f;
+            GlobalsManager.Instance.sniperRange = 40f;
         }
     }
 }

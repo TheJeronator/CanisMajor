@@ -7,7 +7,6 @@ public class movementEnemy : MonoBehaviour
 {
     public GameObject player;
     public Transform target;
-    public float movementSpeed = 3f;
 
 
     // Start is called before the first frame update
@@ -26,7 +25,14 @@ public class movementEnemy : MonoBehaviour
         {
             Destroy(this);
         }
-        if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.spottingrange)
+        if (gameObject.tag == "enemy3")
+        {
+           if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.sniperRange)
+            {
+                pathDest.target = target;
+            }
+        }
+        else if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.spottingrange)
         {
             pathDest.target = target;
         }

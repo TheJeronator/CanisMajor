@@ -22,38 +22,39 @@ public class ShipLayout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (GlobalsManager.Instance.mg1Equipped == true)
         {
-            machineGun1.active = true;
+            machineGun1.SetActive(true);
         }
         if (GlobalsManager.Instance.mg2Equipped == true)
         {
-           
+            machineGun2.SetActive(true);
         }
         if (GlobalsManager.Instance.shotgunEquipped == true)
         {
-            
+            shotGun.SetActive(true);
         }
         if (GlobalsManager.Instance.cannonEquipped == true)
         {
-            
+            Cannon.SetActive(true);
         }
 
-        else if (GlobalsManager.Instance.mg1Equipped == false)
+        if (GlobalsManager.Instance.mg1Equipped == false)
         {
-           
+            machineGun1.SetActive(false);
         }
-        else if (GlobalsManager.Instance.mg2Equipped == false)
+        if (GlobalsManager.Instance.mg2Equipped == false)
         {
-            
+            machineGun2.SetActive(false);
         }
-        else if (GlobalsManager.Instance.shotgunEquipped == false)
+        if (GlobalsManager.Instance.shotgunEquipped == false)
         {
-            
+            shotGun.SetActive(false);
         }
-        else if (GlobalsManager.Instance.cannonEquipped == false)
+        if (GlobalsManager.Instance.cannonEquipped == false)
         {
-           
+            Cannon.SetActive(false);
         }
     }
 }
