@@ -99,7 +99,7 @@ MonoBehaviour:
     type: 3}
   shotSpawnEnemy1: {fileID: 2807710213931760578}
   fireRate: 4
-  bulletSpeed: 20
+  bulletSpeed: 40
 --- !u!114 &2807710214000634693
 MonoBehaviour:
   m_ObjectHideFlags: 0
