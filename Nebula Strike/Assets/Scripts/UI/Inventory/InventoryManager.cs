@@ -45,6 +45,18 @@ public class InventoryManager : MonoBehaviour
                 case "cannon":
                     GlobalsManager.Instance.cannonEquipped = false;
                     break;
+                case "cloak":
+                    GlobalsManager.Instance.cloakEquipped = false;
+                    break;
+                case "tractorBeam":
+                    GlobalsManager.Instance.tractorbeamEquipped = false;
+                    break;
+                case "singleShield":
+                    GlobalsManager.Instance.leftshieldEquipped = false;
+                    break;
+                case "doubleShield":
+                    GlobalsManager.Instance.rightshieldEquipped = false;
+                    break;
             }
         }
     }
@@ -69,6 +81,18 @@ public class InventoryManager : MonoBehaviour
                         break;
                     case "cannon":
                         GlobalsManager.Instance.cannonEquipped = true;
+                        break;
+                    case "cloak":
+                        GlobalsManager.Instance.cloakEquipped = true;
+                        break;
+                    case "tractorBeam":
+                        GlobalsManager.Instance.tractorbeamEquipped = true;
+                        break;
+                    case "singleShield":
+                        GlobalsManager.Instance.leftshieldEquipped = true;
+                        break;
+                    case "doubleShield":
+                        GlobalsManager.Instance.rightshieldEquipped = false;
                         break;
                 }
                 if (previousGun != null)

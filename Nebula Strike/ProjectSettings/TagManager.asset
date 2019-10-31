@@ -12,6 +12,10 @@ TagManager:
   - mg2
   - cannon
   - shotgun
+  - cloak
+  - beam
+  - leftshield
+  - rightshield
   layers:
   - Default
   - TransparentFX

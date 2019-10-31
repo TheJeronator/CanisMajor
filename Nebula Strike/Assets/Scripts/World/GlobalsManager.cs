@@ -8,6 +8,7 @@ public class GlobalsManager : MonoBehaviour
 
     public GameObject Inventory;
     public int playerHP = 100;
+    public float spottingrange = 30f;
     public bool mg1 = false;
     public bool mg2 = false;
     public bool shotgun = false;
@@ -21,11 +22,19 @@ public class GlobalsManager : MonoBehaviour
     public bool mg2notYetAdded = true;
     public bool shotgunnotYetAdded = true;
     public bool cannonnotYetAdded = true;
+    public bool cloaknotYetAdded = true;
+    public bool leftshieldnotYetAdded = true;
+    public bool rightshieldnotYetAdded = true;
+    public bool tractorbeamnotYetAdded = true;
 
     public bool mg1Equipped = false;
     public bool mg2Equipped = false;
     public bool shotgunEquipped = false;
     public bool cannonEquipped = false;
+    public bool cloakEquipped = false;
+    public bool leftshieldEquipped = false;
+    public bool rightshieldEquipped = false;
+    public bool tractorbeamEquipped = false;
 
     public enum guns
     {
@@ -59,6 +68,14 @@ public class GlobalsManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I)) {
             Inventory.SetActive(!Inventory.activeSelf);
+        }
+        if (GlobalsManager.Instance.cloakEquipped == true)
+        {
+            GlobalsManager.Instance.spottingrange = 15f;
+        }
+        else
+        {
+            GlobalsManager.Instance.spottingrange = 30f;
         }
     }
 }

@@ -18,7 +18,7 @@ public class shootingEnemy : MonoBehaviour
     }
     void Update()
     {
-        if (Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < 30f))
+        if (Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < GlobalsManager.Instance.spottingrange))
         {
             fireCooldown = Time.time + fireRate;
             shoot();

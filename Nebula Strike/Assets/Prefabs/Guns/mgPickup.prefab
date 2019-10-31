@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991984914748230638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030063808, y: -0.0139132375, z: -0.60071987}
-  m_LocalScale: {x: 0.9082721, y: 0.8805847, z: 0.9227647}
+  m_LocalPosition: {x: 0.09, y: -0.026, z: -0.60071987}
+  m_LocalScale: {x: 0.6623711, y: 0.64217967, z: 0.67294}
   m_Children: []
   m_Father: {fileID: 991984914851924820}
   m_RootOrder: 0
@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 991984914851924821}
   - component: {fileID: 991984914851924842}
   - component: {fileID: 991984914851924843}
+  - component: {fileID: 7225597307242942525}
   m_Layer: 0
   m_Name: mgPickup
   m_TagString: mg1
@@ -184,3 +185,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7225597307242942525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991984914851924840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612dc7142dcb10f45ad5921f01a974de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gunswitch: 1

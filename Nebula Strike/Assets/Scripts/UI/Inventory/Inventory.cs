@@ -50,11 +50,51 @@ public class Inventory : MonoBehaviour
         if (GlobalsManager.Instance.cannonnotYetAdded == true && GlobalsManager.Instance.cannon == true)
         {
             {
-                guns[3] = (gunsList[3]);
+                guns[3] = gunsList[3];
                 Debug.Log(guns);
                 Debug.Log(gunsList);
                 refreshUI();
                 GlobalsManager.Instance.cannonnotYetAdded = false;
+            }
+        }
+        if (GlobalsManager.Instance.cloaknotYetAdded == true && GlobalsManager.Instance.cloak == true)
+        {
+            {
+                guns[4] = gunsList[4];
+                Debug.Log(guns);
+                Debug.Log(gunsList);
+                refreshUI();
+                GlobalsManager.Instance.cloaknotYetAdded = false;
+            }
+        }
+        if (GlobalsManager.Instance.tractorbeamnotYetAdded == true && GlobalsManager.Instance.tractorBeam == true)
+        {
+            {
+                guns[5] = gunsList[5];
+                Debug.Log(guns);
+                Debug.Log(gunsList);
+                refreshUI();
+                GlobalsManager.Instance.tractorbeamnotYetAdded = false;
+            }
+        }
+        if (GlobalsManager.Instance.leftshieldnotYetAdded == true && GlobalsManager.Instance.leftShield == true)
+        {
+            {
+                guns[6] = gunsList[6];
+                Debug.Log(guns);
+                Debug.Log(gunsList);
+                refreshUI();
+                GlobalsManager.Instance.leftshieldnotYetAdded = false;
+            }
+        }
+        if (GlobalsManager.Instance.rightshieldnotYetAdded == true && GlobalsManager.Instance.rightShield == true)
+        {
+            {
+                guns[7] = gunsList[7];
+                Debug.Log(guns);
+                Debug.Log(gunsList);
+                refreshUI();
+                GlobalsManager.Instance.rightshieldnotYetAdded = false;
             }
         }
         if (GlobalsManager.Instance.mg1 == true && GlobalsManager.Instance.mg2 == true && GlobalsManager.Instance.mg1Equipped == false)
@@ -74,6 +114,7 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+
     }
     private void Awake()
     {
