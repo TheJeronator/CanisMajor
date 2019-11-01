@@ -21467,6 +21467,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -21579,6 +21580,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 52.076805, y: 39.824585}
   m_EdgeRadius: 0
+--- !u!82 &519420034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f183a51ef3878f6448d730242fed2b86, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &521153708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4915510327919666349, guid: 2cbf6eedd8ea5394c97be745f8f44ee4,
@@ -27936,36 +28033,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!21 &632751647
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
-  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BLENDMODES_OverlayTexture:
-        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &632825694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51010,12 +51077,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -676.9
+      value: -660.8
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -731.5
+      value: -808.9
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -59540,7 +59607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 632751647}
+  - {fileID: 1903988120}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59592,7 +59659,7 @@ MonoBehaviour:
   framebufferEnabled: 0
   unifiedGrabEnabled: 0
   shareMaterial: 0
-  blendMaterial: {fileID: 632751647}
+  blendMaterial: {fileID: 1903988120}
   componentExtensionState:
     extendedComponent: {fileID: 1401738656}
     shaderProperties:
@@ -76326,6 +76393,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34920363e531e274e853c9c0d3e86bec, type: 3}
+--- !u!21 &1903988120
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
+  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1905884838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85940,12 +86037,12 @@ PrefabInstance:
     - target: {fileID: 1497335952401841709, guid: f12969ac26e9df5468dcfcd3efe17b4c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -713.4641
+      value: -687.8
       objectReference: {fileID: 0}
     - target: {fileID: 1497335952401841709, guid: f12969ac26e9df5468dcfcd3efe17b4c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -815.5321
+      value: -794.7
       objectReference: {fileID: 0}
     - target: {fileID: 1497335952401841709, guid: f12969ac26e9df5468dcfcd3efe17b4c,
         type: 3}
@@ -85993,7 +86090,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 9026863386631251268, guid: f12969ac26e9df5468dcfcd3efe17b4c, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f12969ac26e9df5468dcfcd3efe17b4c, type: 3}
 --- !u!1001 &2831527613563833473
 PrefabInstance:
@@ -86498,12 +86595,12 @@ PrefabInstance:
     - target: {fileID: 9143899560836990910, guid: ac294a0d2993eef49bebf29c0bd3fabb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -780.56
+      value: -592.5
       objectReference: {fileID: 0}
     - target: {fileID: 9143899560836990910, guid: ac294a0d2993eef49bebf29c0bd3fabb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -848.42
+      value: -577.9
       objectReference: {fileID: 0}
     - target: {fileID: 9143899560836990910, guid: ac294a0d2993eef49bebf29c0bd3fabb,
         type: 3}
@@ -86567,12 +86664,12 @@ PrefabInstance:
     - target: {fileID: 9117217508175023704, guid: 8a77b85bcb07dfe44ba63fda7814da18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -731.24
+      value: -612.6
       objectReference: {fileID: 0}
     - target: {fileID: 9117217508175023704, guid: 8a77b85bcb07dfe44ba63fda7814da18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -840.74
+      value: -872.3
       objectReference: {fileID: 0}
     - target: {fileID: 9117217508175023704, guid: 8a77b85bcb07dfe44ba63fda7814da18,
         type: 3}
