@@ -121,7 +121,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: cannon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7225597307242942525, guid: 93c487a8a517cea4db8ee544dd69045f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93c487a8a517cea4db8ee544dd69045f, type: 3}
 --- !u!1 &4209955456903820327 stripped
 GameObject:

@@ -22,7 +22,7 @@ public class movement : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        if (GlobalsManager.Instance.playerHP == 0)
+        if (GlobalsManager.Instance.playerHP <= 0)
         {
             Destroy(gameObject);
         }

@@ -1621,12 +1621,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -717.4
+      value: -564.9
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -845.7
+      value: -860.4
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -2104,8 +2104,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -8461,8 +8459,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: bb4c5227516ecab4ebd4aac77bd0181a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -15094,8 +15090,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300008, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19428,8 +19422,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19822,12 +19814,12 @@ PrefabInstance:
     - target: {fileID: 8280972187548036321, guid: e81401a9f3c545e40b3bee156f825116,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -686.8
+      value: -618.8
       objectReference: {fileID: 0}
     - target: {fileID: 8280972187548036321, guid: e81401a9f3c545e40b3bee156f825116,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -804.2
+      value: -807.6
       objectReference: {fileID: 0}
     - target: {fileID: 8280972187548036321, guid: e81401a9f3c545e40b3bee156f825116,
         type: 3}
@@ -21985,8 +21977,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -27946,6 +27936,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!21 &632751647
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
+  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &632825694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30891,8 +30911,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -33013,8 +33031,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300016, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -33234,12 +33250,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -686.5
+      value: -618.5
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -815.8
+      value: -819.19995
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -35010,8 +35026,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300014, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -37351,12 +37365,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -770.5
+      value: -702.2
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -819.7
+      value: -612.1
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -41238,8 +41252,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300006, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -42827,8 +42839,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300012, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -51000,12 +51010,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -730.5
+      value: -676.9
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -779.8
+      value: -731.5
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -53030,8 +53040,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300016, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -55074,8 +55082,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -59534,7 +59540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1925652387}
+  - {fileID: 632751647}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59586,7 +59592,7 @@ MonoBehaviour:
   framebufferEnabled: 0
   unifiedGrabEnabled: 0
   shareMaterial: 0
-  blendMaterial: {fileID: 1925652387}
+  blendMaterial: {fileID: 632751647}
   componentExtensionState:
     extendedComponent: {fileID: 1401738656}
     shaderProperties:
@@ -70452,12 +70458,12 @@ PrefabInstance:
     - target: {fileID: 2810860743455906291, guid: 97459e71925fdda4abc5398ad4a98f74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -748.81006
+      value: -707.5
       objectReference: {fileID: 0}
     - target: {fileID: 2810860743455906291, guid: 97459e71925fdda4abc5398ad4a98f74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -725.7
+      value: -604.8
       objectReference: {fileID: 0}
     - target: {fileID: 2810860743455906291, guid: 97459e71925fdda4abc5398ad4a98f74,
         type: 3}
@@ -71277,8 +71283,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300014, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -71646,8 +71650,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -76213,8 +76215,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: bb4c5227516ecab4ebd4aac77bd0181a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -76840,36 +76840,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24fb42ccd4574844da532005899bd143, type: 3}
---- !u!21 &1925652387
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
-  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BLENDMODES_OverlayTexture:
-        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1928578245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77015,8 +76985,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -80300,12 +80268,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -738.31006
+      value: -697
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -722.3
+      value: -601.39996
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -82457,12 +82425,12 @@ PrefabInstance:
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -770.1
+      value: -701.8
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -803.6
+      value: -595.99994
       objectReference: {fileID: 0}
     - target: {fileID: 2807710214000634718, guid: 24fb42ccd4574844da532005899bd143,
         type: 3}
@@ -83979,8 +83947,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300004, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0

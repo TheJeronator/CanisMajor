@@ -22,7 +22,15 @@ public class Contact : MonoBehaviour
         if (collision.gameObject.tag == "playerShot")
         {
             hp -= 25;
-            if (hp == 0)
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+        if (collision.gameObject.tag == "playerShotHeavy")
+        {
+            hp -= 100;
+            if (hp <= 0)
             {
                 Destroy(gameObject);
             }

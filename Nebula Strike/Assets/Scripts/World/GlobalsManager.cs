@@ -72,7 +72,6 @@ public class GlobalsManager : MonoBehaviour
     {
         playerMovement.enabled = false;
         playerShooting.enabled = false;
-        playerRB.velocity = new Vector2(0, 0);
 
         yield return new WaitForSeconds(3f);
 
