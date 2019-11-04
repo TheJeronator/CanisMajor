@@ -7,12 +7,15 @@ public class movementEnemy : MonoBehaviour
 {
     public GameObject player;
     public Transform target;
-
-
+    private ParticleSystem[] particles;
+    private Rigidbody2D rb;
+    private Vector3 position;
+    private Vector3 newPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        particles = GetComponentsInChildren<ParticleSystem>();
+        rb = GetComponentInChildren<Rigidbody2D>();
     }
 
     
@@ -21,6 +24,7 @@ public class movementEnemy : MonoBehaviour
     {
         var pathDest = GetComponent<AIDestinationSetter>();
         pathDest.target = null;
+        position = transform.position;
         if (GlobalsManager.Instance.playerHP == 0)
         {
             Destroy(this);
@@ -36,6 +40,23 @@ public class movementEnemy : MonoBehaviour
         {
             pathDest.target = target;
         }
+        if (position != newPosition)
+        {
+            foreach (ParticleSystem particle in particles)
+            {
+                particle.Play();
+                particle.enableEmission = true;
+            }
+        }
+        else
+        {
+            foreach (ParticleSystem particle in particles)
+            {
+                particle.Stop();
+                particle.enableEmission = false;
+            }
+        }
+        newPosition = position;
     }
 
 }

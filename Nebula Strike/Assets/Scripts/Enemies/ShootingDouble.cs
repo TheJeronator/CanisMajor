@@ -31,7 +31,6 @@ public class ShootingDouble : MonoBehaviour
         GameObject playerBullet2 = Instantiate(enemyShot, shotSpawnEnemy2.position, shotSpawnEnemy2.rotation);
         Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
         Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
-        Vector2 lookDir = player.transform.position - transform.position;
         bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
         bulletRb2.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }

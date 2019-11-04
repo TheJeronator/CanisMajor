@@ -6,20 +6,14 @@ public class ShipLayout : MonoBehaviour
 {
     public GameObject machineGun1;
     public GameObject machineGun2;
-   // public GameObject Cloak;
+    public GameObject Cloak;
     public GameObject shotGun;
     public GameObject Cannon;
-   // public GameObject shield1;
-   // public GameObject shield2;
-   // public GameObject tractorBeam;
+    public GameObject shield1;
+    public GameObject shield2;
+    public GameObject tractorBeam;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -39,7 +33,22 @@ public class ShipLayout : MonoBehaviour
         {
             Cannon.SetActive(true);
         }
-
+        if (GlobalsManager.Instance.cloakEquipped == true)
+        {
+            Cloak.SetActive(true);
+        }
+        if (GlobalsManager.Instance.tractorbeamEquipped == true)
+        {
+            tractorBeam.SetActive(true);
+        }
+        if (GlobalsManager.Instance.leftshieldEquipped == true)
+        {
+            shield1.SetActive(true);
+        }
+        if (GlobalsManager.Instance.rightshieldEquipped == true)
+        {
+            shield2.SetActive(true);
+        }
         if (GlobalsManager.Instance.mg1Equipped == false)
         {
             machineGun1.SetActive(false);
@@ -56,5 +65,30 @@ public class ShipLayout : MonoBehaviour
         {
             Cannon.SetActive(false);
         }
+        if (GlobalsManager.Instance.cloakEquipped == false)
+        {
+            Cloak.SetActive(false);
+        }
+        if (GlobalsManager.Instance.tractorbeamEquipped == false)
+        {
+            tractorBeam.SetActive(false);
+        }
+        if (GlobalsManager.Instance.leftshieldEquipped == false)
+        {
+            shield1.SetActive(false);
+        }
+        if (GlobalsManager.Instance.rightshieldEquipped == false)
+        {
+            shield2.SetActive(false);
+        }
+        if (GlobalsManager.Instance.cloakActive == true)
+        {
+            this.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+        }
+        else if (GlobalsManager.Instance.cloakActive == false)
+        {
+            this.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
     }
+
 }

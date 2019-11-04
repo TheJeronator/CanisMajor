@@ -13,6 +13,11 @@ public class GlobalsManager : MonoBehaviour
     public movement playerMovement;
     public Shooting playerShooting;
     public Rigidbody2D playerRB;
+
+    public bool level1Completed = false;
+    public bool level2Completed = false;
+    
+
     public bool mg1 = false;
     public bool mg2 = false;
     public bool shotgun = false;
@@ -39,6 +44,10 @@ public class GlobalsManager : MonoBehaviour
     public bool leftshieldEquipped = false;
     public bool rightshieldEquipped = false;
     public bool tractorbeamEquipped = false;
+
+    public bool cloakActive = false;
+    public float cloakCooldown;
+    public bool hasAsteroid = false;
 
     public enum guns
     {
@@ -78,12 +87,22 @@ public class GlobalsManager : MonoBehaviour
         playerShooting.enabled = true;
         playerMovement.enabled = true;
     }
+    IEnumerator CloakActivated()
+    {
+
+        GlobalsManager.Instance.cloakActive = true;
+
+        yield return new WaitForSeconds(7f);
+
+        GlobalsManager.Instance.cloakActive = false;
+        GlobalsManager.Instance.cloakCooldown = Time.time + 15f;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.I)) {
             Inventory.SetActive(!Inventory.activeSelf);
         }
-        if (GlobalsManager.Instance.cloakEquipped == true)
+        if (GlobalsManager.Instance.cloakActive == true)
         {
             GlobalsManager.Instance.spottingrange = 15f;
             GlobalsManager.Instance.sniperRange = 20f;

@@ -28,9 +28,6 @@ public class shootingSniper : MonoBehaviour
     {
         GameObject playerBullet = Instantiate(enemyShot, shotSpawnEnemy1.position, shotSpawnEnemy1.rotation);
         Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
-        Vector2 lookDir = player.transform.position - transform.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        bulletRb.rotation = angle;
         bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
