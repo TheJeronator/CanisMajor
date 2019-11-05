@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: singleShield
   m_EditorClassIdentifier: 
   gunName: singleShield
-  Icon: {fileID: 21300008, guid: 59690d26ee8898b4b9eaa58c8256aa69, type: 3}
+  Icon: {fileID: 21300012, guid: 54804cbb84e537d4d85df2d356d845bf, type: 3}
+  IsEquipped: 0
   WeaponNum: 0
