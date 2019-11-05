@@ -12,7 +12,7 @@ public class ShipLayout : MonoBehaviour
     public GameObject shield1;
     public GameObject shield2;
     public GameObject tractorBeam;
-
+    public GameObject shieldSprite;
 
     void Update()
     {
@@ -44,10 +44,18 @@ public class ShipLayout : MonoBehaviour
         if (GlobalsManager.Instance.leftshieldEquipped == true)
         {
             shield1.SetActive(true);
+            if (GlobalsManager.Instance.Shields > 0)
+            {
+                GlobalsManager.Instance.shieldsDown = false;
+            }
         }
         if (GlobalsManager.Instance.rightshieldEquipped == true)
         {
             shield2.SetActive(true);
+            if (GlobalsManager.Instance.Shields > 0)
+            {
+                GlobalsManager.Instance.shieldsDown = false;
+            }
         }
         if (GlobalsManager.Instance.mg1Equipped == false)
         {
@@ -76,10 +84,18 @@ public class ShipLayout : MonoBehaviour
         if (GlobalsManager.Instance.leftshieldEquipped == false)
         {
             shield1.SetActive(false);
+            if (GlobalsManager.Instance.rightshieldEquipped == false)
+            {
+                GlobalsManager.Instance.shieldsDown = true;
+            }
         }
         if (GlobalsManager.Instance.rightshieldEquipped == false)
         {
             shield2.SetActive(false);
+            if (GlobalsManager.Instance.leftshieldEquipped == false)
+            {
+                GlobalsManager.Instance.shieldsDown = true;
+            }
         }
         if (GlobalsManager.Instance.cloakActive == true)
         {
@@ -88,6 +104,14 @@ public class ShipLayout : MonoBehaviour
         else if (GlobalsManager.Instance.cloakActive == false)
         {
             this.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (GlobalsManager.Instance.leftshieldEquipped == true || GlobalsManager.Instance.rightshieldEquipped == true)
+        {
+            shieldSprite.SetActive(true);
+        }
+        else
+        {
+            shieldSprite.SetActive(false);
         }
     }
 

@@ -8,6 +8,7 @@ public class GlobalsManager : MonoBehaviour
 
     public GameObject Inventory;
     public int playerHP = 100;
+    public int Shields = 100;
     public float spottingrange = 30f;
     public float sniperRange = 40f;
     public movement playerMovement;
@@ -48,7 +49,8 @@ public class GlobalsManager : MonoBehaviour
     public bool cloakActive = false;
     public float cloakCooldown;
     public bool hasAsteroid = false;
-
+    public bool shieldsDown = true;
+    public bool shieldIsRecharging = false;
     public enum guns
     {
         singleMG = 0,
@@ -97,6 +99,26 @@ public class GlobalsManager : MonoBehaviour
         GlobalsManager.Instance.cloakActive = false;
         GlobalsManager.Instance.cloakCooldown = Time.time + 15f;
     }
+    IEnumerator rechargeShields()
+    {
+
+        yield return new WaitForSeconds(0.4f);
+        if (GlobalsManager.Instance.Shields < 100)
+        {
+            GlobalsManager.Instance.Shields += 10;
+            StartCoroutine("rechargeShields");
+        }
+        else
+        {
+            GlobalsManager.Instance.shieldsDown = false;
+            GlobalsManager.Instance.shieldIsRecharging = false;
+        }
+    }
+    IEnumerator coolDown()
+    {
+        yield return new WaitForSeconds(5f);
+        StartCoroutine("rechargeShields");
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.I)) {
@@ -111,6 +133,15 @@ public class GlobalsManager : MonoBehaviour
         {
             GlobalsManager.Instance.spottingrange = 30f;
             GlobalsManager.Instance.sniperRange = 40f;
+        }
+        if (GlobalsManager.Instance.Shields <= 0)
+        {
+            if (GlobalsManager.Instance.shieldIsRecharging == false)
+            {
+                StartCoroutine("coolDown");
+                GlobalsManager.Instance.shieldIsRecharging = true;
+            }
+            GlobalsManager.Instance.shieldsDown = true;
         }
     }
 }

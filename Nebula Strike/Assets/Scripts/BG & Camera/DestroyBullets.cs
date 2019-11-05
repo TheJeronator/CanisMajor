@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyBullets : MonoBehaviour
 {
 
-    public float interval = 5.0f;
+    public float interval = 8f;
     private float timestamp = .0f;
 
     void Start()

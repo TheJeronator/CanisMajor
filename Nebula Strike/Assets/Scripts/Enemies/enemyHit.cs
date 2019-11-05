@@ -19,11 +19,23 @@ public class enemyHit : MonoBehaviour
             if (gameObject.tag == "enemyEMP")
             {
                 GlobalsManager.Instance.StartCoroutine("disableMoveAndShoot");
+                GlobalsManager.Instance.Shields = 0;
                 Destroy(gameObject);
             }
             else
             {
-                GlobalsManager.Instance.playerHP -= 20;
+                if (GlobalsManager.Instance.shieldsDown == true)
+                {
+                    GlobalsManager.Instance.playerHP -= 10;
+                }
+                else if (GlobalsManager.Instance.leftshieldEquipped == true && GlobalsManager.Instance.rightshieldEquipped == true && GlobalsManager.Instance.shieldsDown == false)
+                {
+                    GlobalsManager.Instance.Shields -= 10;
+                }
+                else if (GlobalsManager.Instance.leftshieldEquipped == true || GlobalsManager.Instance.rightshieldEquipped == true && GlobalsManager.Instance.shieldsDown == false)
+                {
+                    GlobalsManager.Instance.Shields -= 20;
+                }
                 Destroy(gameObject);
             }
         }
