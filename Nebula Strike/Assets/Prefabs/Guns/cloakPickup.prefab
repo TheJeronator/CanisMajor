@@ -25,6 +25,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cloakPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 991984914851924840, guid: 93c487a8a517cea4db8ee544dd69045f,
+        type: 3}
+      propertyPath: m_TagString
+      value: cloak
+      objectReference: {fileID: 0}
     - target: {fileID: 991984914851924820, guid: 93c487a8a517cea4db8ee544dd69045f,
         type: 3}
       propertyPath: m_LocalPosition.x

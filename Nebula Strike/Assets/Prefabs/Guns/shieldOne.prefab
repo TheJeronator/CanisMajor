@@ -1,19 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &226638311
+--- !u!114 &506917207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3066852778968737531}
+  m_GameObject: {fileID: 9117217508175023716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 612dc7142dcb10f45ad5921f01a974de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Gunswitch: 8
---- !u!1001 &2831527613335498131
+  Gunswitch: 7
+--- !u!1001 &8305446966229533964
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -23,17 +23,22 @@ PrefabInstance:
     - target: {fileID: 991984914851924840, guid: 93c487a8a517cea4db8ee544dd69045f,
         type: 3}
       propertyPath: m_Name
-      value: doubleShieldPickup
+      value: singleShieldPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 991984914851924840, guid: 93c487a8a517cea4db8ee544dd69045f,
+        type: 3}
+      propertyPath: m_TagString
+      value: leftshield
       objectReference: {fileID: 0}
     - target: {fileID: 991984914851924820, guid: 93c487a8a517cea4db8ee544dd69045f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -712.6
+      value: -731.24
       objectReference: {fileID: 0}
     - target: {fileID: 991984914851924820, guid: 93c487a8a517cea4db8ee544dd69045f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -862.2
+      value: -840.74
       objectReference: {fileID: 0}
     - target: {fileID: 991984914851924820, guid: 93c487a8a517cea4db8ee544dd69045f,
         type: 3}
@@ -111,17 +116,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300008, guid: 59690d26ee8898b4b9eaa58c8256aa69,
         type: 3}
-    - target: {fileID: 991984914748230632, guid: 93c487a8a517cea4db8ee544dd69045f,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7225597307242942525, guid: 93c487a8a517cea4db8ee544dd69045f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 93c487a8a517cea4db8ee544dd69045f, type: 3}
---- !u!1 &3066852778968737531 stripped
+--- !u!1 &9117217508175023716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 991984914851924840, guid: 93c487a8a517cea4db8ee544dd69045f,
     type: 3}
-  m_PrefabInstance: {fileID: 2831527613335498131}
+  m_PrefabInstance: {fileID: 8305446966229533964}
   m_PrefabAsset: {fileID: 0}

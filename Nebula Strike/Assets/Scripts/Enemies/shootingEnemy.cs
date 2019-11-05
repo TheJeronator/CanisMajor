@@ -10,11 +10,12 @@ public class shootingEnemy : MonoBehaviour
     public float fireRate;
     private float fireCooldown;
     public float bulletSpeed = 20f;
+    public AudioSource shotSound;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        shotSound = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -26,6 +27,7 @@ public class shootingEnemy : MonoBehaviour
     }
     void shoot()
     {
+        shotSound.Play();
         GameObject playerBullet = Instantiate(enemyShot, shotSpawnEnemy1.position, shotSpawnEnemy1.rotation);
         Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
         bulletRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);

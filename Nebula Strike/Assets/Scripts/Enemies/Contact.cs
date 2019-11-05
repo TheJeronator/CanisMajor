@@ -5,6 +5,8 @@ using UnityEngine;
 public class Contact : MonoBehaviour
 {
     private int hp = 100;
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,18 +24,33 @@ public class Contact : MonoBehaviour
         if (collision.gameObject.tag == "playerShot")
         {
             hp -= 25;
+            StartCoroutine("enemyDamaged");
             if (hp <= 0)
             {
-                Destroy(gameObject);
+                Explode();
             }
         }
         if (collision.gameObject.tag == "playerShotHeavy")
         {
             hp -= 100;
+            StartCoroutine("enemyDamaged");
             if (hp <= 0)
             {
-                Destroy(gameObject);
+                Explode();
             }
         }
+    }
+    void Explode()
+    {
+        GameObject exp = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+        Destroy(exp, 6f);
+        Destroy(gameObject);
+    }
+    IEnumerator enemyDamaged()
+    {
+        gameObject.GetComponentInChildren<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+        yield return new WaitForSeconds(1f);
+        gameObject.GetComponentInChildren<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
     }
 }

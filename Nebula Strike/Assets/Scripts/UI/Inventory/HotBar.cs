@@ -30,6 +30,7 @@ public class HotBar : MonoBehaviour
                     if (mg.gunName == "singleMG")
                     {
                         equipmentSlots[i].Gun = null;
+                        GlobalsManager.Instance.mg1Equipped = false;
                     }
                 }
             }

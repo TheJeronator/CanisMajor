@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
     public Transform shotSpawnShotgun2;
     public Transform shotSpawnShotgun3;
     public Transform shotSpawnCannon;
+    public AudioSource[] shotsound;
     public float fireRate;
     public float heavyFirerate;
     private float fireCooldown;
@@ -22,7 +23,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        shotsound = GetComponents<AudioSource>();
     }
     void Update()
     {
@@ -41,18 +42,21 @@ public class Shooting : MonoBehaviour
     {
         if (GlobalsManager.Instance.mg1Equipped == true)
         {
+            shotsound[0].Play();
             GameObject playerBullet2 = Instantiate(playerShot, shotSpawnMGLeft.position, shotSpawnMGLeft.rotation);
             Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
             bulletRb2.AddForce(shotSpawnMGLeft.up * bulletSpeed, ForceMode2D.Impulse);
         }
         if (GlobalsManager.Instance.mg2Equipped == true)
         {
+            shotsound[0].Play();
             GameObject playerBullet = Instantiate(playerShot, shotSpawnMGRight.position, shotSpawnMGRight.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnMGRight.up * bulletSpeed, ForceMode2D.Impulse);
         }
         if (GlobalsManager.Instance.shotgunEquipped == true)
         {
+            shotsound[0].Play();
             GameObject playerBullet = Instantiate(playerShot, shotSpawnShotgun1.position, shotSpawnShotgun1.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnShotgun1.up * bulletSpeed, ForceMode2D.Impulse);
@@ -69,6 +73,7 @@ public class Shooting : MonoBehaviour
     {
         if (GlobalsManager.Instance.cannonEquipped == true)
         {
+            shotsound[1].Play();
             GameObject playerBullet = Instantiate(cannonShot, shotSpawnShotgun2.position, shotSpawnShotgun2.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnShotgun2.up * cannonBulletspeed, ForceMode2D.Impulse);

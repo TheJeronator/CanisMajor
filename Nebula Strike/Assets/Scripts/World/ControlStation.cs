@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlStation : MonoBehaviour
 {
-    private int hp = 500;
+    private int hp = 1000;
     private void Update()
     {
         if (hp <= 0)

@@ -92,7 +92,7 @@ public class InventoryManager : MonoBehaviour
                         GlobalsManager.Instance.leftshieldEquipped = true;
                         break;
                     case "doubleShield":
-                        GlobalsManager.Instance.rightshieldEquipped = false;
+                        GlobalsManager.Instance.rightshieldEquipped = true;
                         break;
                 }
                 if (previousGun != null)
