@@ -29,14 +29,19 @@ public class movementEnemy : MonoBehaviour
         {
             Destroy(this);
         }
-        if (gameObject.tag == "enemy3")
+        if (Vector3.Distance(transform.position, target.position) <= 10f)
         {
-           if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.sniperRange)
+            pathDest.target = transform;
+            transform.up = target.position - transform.position;
+        }
+        else if (gameObject.tag == "enemy3")
+        {
+            if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.sniperRange && Vector3.Distance(transform.position, target.position) > 10f)
             {
                 pathDest.target = target;
             }
         }
-        else if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.spottingrange)
+        else if (Vector3.Distance(transform.position, target.position) < GlobalsManager.Instance.spottingrange && Vector3.Distance(transform.position, target.position) > 10f)
         {
             pathDest.target = target;
         }

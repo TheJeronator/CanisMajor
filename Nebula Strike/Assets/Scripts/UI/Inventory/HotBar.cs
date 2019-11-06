@@ -31,6 +31,7 @@ public class HotBar : MonoBehaviour
                     {
                         equipmentSlots[i].Gun = null;
                         GlobalsManager.Instance.mg1Equipped = false;
+                        GlobalsManager.Instance.mg1Unequipped = true;
                     }
                 }
             }

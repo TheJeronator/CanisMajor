@@ -21,6 +21,8 @@ TagManager:
   - enemy3
   - playerShotHeavy
   - enemyEMP
+  - enemyTurrets
+  - OPbullet
   layers:
   - Default
   - TransparentFX
@@ -35,8 +37,8 @@ TagManager:
   - Rockets
   - enemies
   - enemyBullets
-  - 
-  - 
+  - EnemyDebris
+  - turretBullets
   - 
   - 
   - 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
 
     private void Update()
     {
+
         if (GlobalsManager.Instance.mg1notYetAdded == true && GlobalsManager.Instance.mg1 == true)
         {
             {

@@ -16,6 +16,11 @@ public class enemyHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
+            if (gameObject.tag == "OPbullet")
+            {
+                GlobalsManager.Instance.playerHP -= 50;
+                Destroy(gameObject);
+            }
             if (gameObject.tag == "enemyEMP")
             {
                 GlobalsManager.Instance.StartCoroutine("disableMoveAndShoot");

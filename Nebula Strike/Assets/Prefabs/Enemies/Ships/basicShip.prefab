@@ -72,6 +72,7 @@ MonoBehaviour:
   shotSpawnEnemy1: {fileID: 8280972188017605757}
   fireRate: 0.7
   bulletSpeed: 20
+  shotSound: {fileID: 0}
 --- !u!114 &8280972187548036346
 MonoBehaviour:
   m_ObjectHideFlags: 0

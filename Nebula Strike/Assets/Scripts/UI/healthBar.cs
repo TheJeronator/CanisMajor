@@ -12,6 +12,9 @@ public class healthBar : MonoBehaviour
     public float maxShield = 100;
     public static float Shield;
     public Image Shieldspritefill;
+    public static float weaponHeat;
+    public float maxHeat = 100;
+    public Image heatBar;
 
     void Start()
     {
@@ -32,11 +35,13 @@ public class healthBar : MonoBehaviour
             ShieldsSprite.SetActive(false);
         }
          HP = GlobalsManager.Instance.playerHP;
+        weaponHeat = GlobalsManager.Instance.weaponHeat;
     }
 
     private void FixedUpdate()
     {
         healthbarSprite.fillAmount = HP / maxHealth;
         Shieldspritefill.fillAmount = Shield / maxShield;
+        heatBar.fillAmount = weaponHeat / maxHeat;
     }
 }

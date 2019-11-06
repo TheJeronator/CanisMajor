@@ -107,7 +107,13 @@ public class ShipLayout : MonoBehaviour
         }
         if (GlobalsManager.Instance.leftshieldEquipped == true || GlobalsManager.Instance.rightshieldEquipped == true)
         {
-            shieldSprite.SetActive(true);
+            if (GlobalsManager.Instance.shieldsDown == false)
+            {
+                shieldSprite.SetActive(true);
+            } else
+            {
+                shieldSprite.SetActive(false);
+            }
         }
         else
         {

@@ -38,6 +38,7 @@ public class GlobalsManager : MonoBehaviour
     public bool tractorbeamnotYetAdded = true;
 
     public bool mg1Equipped = false;
+    public bool mg1Unequipped = false;
     public bool mg2Equipped = false;
     public bool shotgunEquipped = false;
     public bool cannonEquipped = false;
@@ -51,6 +52,11 @@ public class GlobalsManager : MonoBehaviour
     public bool hasAsteroid = false;
     public bool shieldsDown = true;
     public bool shieldIsRecharging = false;
+    public float weaponHeat;
+    public bool weaponsOverheated = false;
+    public bool weaponsCooling = false;
+    public bool tut1Complete = false;
+
     public enum guns
     {
         singleMG = 0,
@@ -78,6 +84,7 @@ public class GlobalsManager : MonoBehaviour
     public void Start()
     {
         Inventory.SetActive(false);
+        StartCoroutine("coolWeapons");
     }
     IEnumerator disableMoveAndShoot()
     {
@@ -97,7 +104,7 @@ public class GlobalsManager : MonoBehaviour
         yield return new WaitForSeconds(7f);
 
         GlobalsManager.Instance.cloakActive = false;
-        GlobalsManager.Instance.cloakCooldown = Time.time + 15f;
+        GlobalsManager.Instance.cloakCooldown = Time.time + 10f;
     }
     IEnumerator rechargeShields()
     {
@@ -116,8 +123,45 @@ public class GlobalsManager : MonoBehaviour
     }
     IEnumerator coolDown()
     {
+        GlobalsManager.Instance.shieldIsRecharging = true;
         yield return new WaitForSeconds(5f);
         StartCoroutine("rechargeShields");
+    }
+    IEnumerator weaponsCooldown()
+    {
+        weaponsCooling = true;
+        yield return new WaitForSeconds(3f);
+        StartCoroutine("coolWeapons");
+    }
+    IEnumerator coolWeapons()
+    {
+        if (GlobalsManager.Instance.weaponHeat > 0 && weaponsOverheated == false)
+        {
+            GlobalsManager.Instance.weaponHeat -= 1;
+        } else if (GlobalsManager.Instance.weaponsOverheated == true)
+        {
+            GlobalsManager.Instance.StartCoroutine("overheatedCool");   
+        }
+        yield return new WaitForSeconds(0.3f);
+        if (GlobalsManager.Instance.weaponsOverheated == false)
+        {
+            GlobalsManager.Instance.StartCoroutine("coolWeapons");
+        }
+    }
+    IEnumerator overheatedCool()
+    {
+        GlobalsManager.Instance.weaponHeat -= 1;
+        yield return new WaitForSeconds(0.05f);
+        if (GlobalsManager.Instance.weaponHeat <= 30)
+        {
+            GlobalsManager.Instance.weaponsOverheated = false;
+            GlobalsManager.Instance.weaponsCooling = false;
+            StopCoroutine("overheatedCool");
+            StartCoroutine("coolWeapons");
+        } else
+        {
+            StartCoroutine("overheatedCool");
+        }
     }
     public void Update()
     {
@@ -131,7 +175,7 @@ public class GlobalsManager : MonoBehaviour
         }
         else
         {
-            GlobalsManager.Instance.spottingrange = 30f;
+            GlobalsManager.Instance.spottingrange = 35f;
             GlobalsManager.Instance.sniperRange = 40f;
         }
         if (GlobalsManager.Instance.Shields <= 0)
@@ -142,6 +186,15 @@ public class GlobalsManager : MonoBehaviour
                 GlobalsManager.Instance.shieldIsRecharging = true;
             }
             GlobalsManager.Instance.shieldsDown = true;
+        }
+        if (GlobalsManager.Instance.weaponHeat >= 100 && weaponsCooling == false)
+        {
+            GlobalsManager.Instance.weaponsOverheated = true;
+            GlobalsManager.Instance.StopCoroutine("coolWeapons");
+            GlobalsManager.Instance.StartCoroutine("weaponsCooldown");
+        } else if (GlobalsManager.Instance.weaponHeat < 100 && GlobalsManager.Instance.weaponsOverheated == false && GlobalsManager.Instance.weaponHeat > 0)
+        {
+            
         }
     }
 }

@@ -27,12 +27,12 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time > fireCooldown)
+        if (Input.GetButton("Fire1") && Time.time > fireCooldown && GlobalsManager.Instance.weaponsOverheated == false)
         {
             fireCooldown = Time.time + fireRate;
             shoot();
         }
-        if (Input.GetButton("Fire1") && Time.time > heavyFirecooldown)
+        if (Input.GetButton("Fire1") && Time.time > heavyFirecooldown && GlobalsManager.Instance.weaponsOverheated == false)
         {
             heavyFirecooldown = Time.time + heavyFirerate;
             shootHeavy();
@@ -43,6 +43,14 @@ public class Shooting : MonoBehaviour
         if (GlobalsManager.Instance.mg1Equipped == true)
         {
             shotsound[0].Play();
+            GlobalsManager.Instance.weaponHeat += 2;
+            Debug.Log(GlobalsManager.Instance.weaponHeat);
+            GlobalsManager.Instance.StopCoroutine("CloakActivated");
+            if (GlobalsManager.Instance.cloakActive == true)
+            {
+                GlobalsManager.Instance.cloakCooldown = Time.time + 10f;
+            }
+            GlobalsManager.Instance.cloakActive = false;
             GameObject playerBullet2 = Instantiate(playerShot, shotSpawnMGLeft.position, shotSpawnMGLeft.rotation);
             Rigidbody2D bulletRb2 = playerBullet2.GetComponent<Rigidbody2D>();
             bulletRb2.AddForce(shotSpawnMGLeft.up * bulletSpeed, ForceMode2D.Impulse);
@@ -50,13 +58,28 @@ public class Shooting : MonoBehaviour
         if (GlobalsManager.Instance.mg2Equipped == true)
         {
             shotsound[0].Play();
+            GlobalsManager.Instance.weaponHeat += 2;
+            Debug.Log(GlobalsManager.Instance.weaponHeat);
+            GlobalsManager.Instance.StopCoroutine("CloakActivated");
+            if (GlobalsManager.Instance.cloakActive == true)
+            {
+                GlobalsManager.Instance.cloakCooldown = Time.time + 10f;
+            }
+            GlobalsManager.Instance.cloakActive = false;
             GameObject playerBullet = Instantiate(playerShot, shotSpawnMGRight.position, shotSpawnMGRight.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnMGRight.up * bulletSpeed, ForceMode2D.Impulse);
         }
         if (GlobalsManager.Instance.shotgunEquipped == true)
         {
+            GlobalsManager.Instance.weaponHeat += 5;
             shotsound[0].Play();
+            GlobalsManager.Instance.StopCoroutine("CloakActivated");
+            if (GlobalsManager.Instance.cloakActive == true)
+            {
+                GlobalsManager.Instance.cloakCooldown = Time.time + 10f;
+            }
+            GlobalsManager.Instance.cloakActive = false;
             GameObject playerBullet = Instantiate(playerShot, shotSpawnShotgun1.position, shotSpawnShotgun1.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnShotgun1.up * bulletSpeed, ForceMode2D.Impulse);
@@ -74,6 +97,13 @@ public class Shooting : MonoBehaviour
         if (GlobalsManager.Instance.cannonEquipped == true)
         {
             shotsound[1].Play();
+            GlobalsManager.Instance.weaponHeat += 5;
+            GlobalsManager.Instance.StopCoroutine("CloakActivated");
+            if(GlobalsManager.Instance.cloakActive == true)
+            {
+                GlobalsManager.Instance.cloakCooldown = Time.time + 10f;
+            }
+            GlobalsManager.Instance.cloakActive = false;
             GameObject playerBullet = Instantiate(cannonShot, shotSpawnShotgun2.position, shotSpawnShotgun2.rotation);
             Rigidbody2D bulletRb = playerBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shotSpawnShotgun2.up * cannonBulletspeed, ForceMode2D.Impulse);
