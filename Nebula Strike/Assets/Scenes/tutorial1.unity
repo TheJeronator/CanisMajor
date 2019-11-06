@@ -322,6 +322,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74597012}
   m_CullTransparentMesh: 0
+--- !u!21 &105070231
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
+  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &159752457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,36 +2009,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &908957287
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/UnlitTransparent/Overlay
-  m_Shader: {fileID: 4800000, guid: 0cfbd5c69d6616f4887f73b3aaa14378, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_HARDLIGHT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BLENDMODES_OverlayTexture:
-        m_Texture: {fileID: 2800000, guid: 3d90cca2d157b6d4c90c9a96f1fa0e92, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5474f58dd4f9fe249b5839207de89207, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _BLENDMODES_OverlayColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &936379037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8488159117709865222, guid: 4f935e2db88c1824b9b512c6db157703,
@@ -2662,6 +2662,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063234889}
   m_CullTransparentMesh: 0
+--- !u!1 &1088907699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 991984914851924840, guid: 93c487a8a517cea4db8ee544dd69045f,
+    type: 3}
+  m_PrefabInstance: {fileID: 742010389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210065938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3242,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 908957287}
+  - {fileID: 105070231}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3288,7 +3294,7 @@ MonoBehaviour:
   framebufferEnabled: 0
   unifiedGrabEnabled: 0
   shareMaterial: 0
-  blendMaterial: {fileID: 908957287}
+  blendMaterial: {fileID: 105070231}
   componentExtensionState:
     extendedComponent: {fileID: 1401738656}
     shaderProperties:
@@ -4370,7 +4376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 521.4497, y: 167.6}
+  m_AnchoredPosition: {x: 515, y: 167.6}
   m_SizeDelta: {x: 357.1, y: 172.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871550371
@@ -4391,7 +4397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5234126feec4a740a55149cbb57857a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d816860c18dafc54cbc8341b320d84cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4422,14 +4428,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialScreen: {fileID: 1871550371}
   TutorialSprites:
-  - {fileID: 21300000, guid: c5234126feec4a740a55149cbb57857a, type: 3}
-  - {fileID: 21300000, guid: 56ff08fb4ac3fba499ae8a57001eec0f, type: 3}
-  - {fileID: 21300000, guid: 2dd85e6ef67e202408c18197011c8cc3, type: 3}
-  - {fileID: 21300000, guid: c21332e8794574c4c9ba4784666cdd33, type: 3}
-  - {fileID: 21300000, guid: 59a872f49b5f84f49826a8078565f55c, type: 3}
-  - {fileID: 21300000, guid: 4267df319f7a95f4fa15b9f868de2799, type: 3}
-  - {fileID: 21300000, guid: 4fc6d8baa4951d44d89ea83e64b172b4, type: 3}
-  gun: {fileID: 0}
+  - {fileID: 21300000, guid: d816860c18dafc54cbc8341b320d84cf, type: 3}
+  - {fileID: 21300000, guid: 6e1e9089cbf4eb249bba4967d69d7b93, type: 3}
+  - {fileID: 21300000, guid: 6e1e9089cbf4eb249bba4967d69d7b93, type: 3}
+  - {fileID: 21300000, guid: 4ac4ed6b4fca65242af1fecbc941a558, type: 3}
+  - {fileID: 21300000, guid: 89ec731da037a814da0af3853760505b, type: 3}
+  - {fileID: 21300000, guid: df194b2c8514f3441ba48aaba618fe99, type: 3}
+  - {fileID: 21300000, guid: 8e4aad25f7b1c4c41857614cdfe62956, type: 3}
+  gun: {fileID: 1088907699}
   cloak: {fileID: 0}
   shotgun: {fileID: 0}
   mg2: {fileID: 0}
