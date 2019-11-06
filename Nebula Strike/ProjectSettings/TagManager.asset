@@ -23,6 +23,7 @@ TagManager:
   - enemyEMP
   - enemyTurrets
   - OPbullet
+  - inventory
   layers:
   - Default
   - TransparentFX

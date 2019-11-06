@@ -20,6 +20,10 @@ public class ShootingDouble : MonoBehaviour
     }
     void Update()
     {
+        if (GlobalsManager.Instance.playerHP <= 0)
+        {
+            Destroy(this);
+        }
         if (Time.time > fireCooldown && (Vector3.Distance(transform.position, player.position) < GlobalsManager.Instance.spottingrange))
         {
             fireCooldown = Time.time + fireRate;

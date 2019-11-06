@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalsManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GlobalsManager : MonoBehaviour
     public movement playerMovement;
     public Shooting playerShooting;
     public Rigidbody2D playerRB;
+    public GameObject gameMenu;
 
     public bool level1Completed = false;
     public bool level2Completed = false;
@@ -74,7 +76,6 @@ public class GlobalsManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -84,14 +85,16 @@ public class GlobalsManager : MonoBehaviour
     public void Start()
     {
         Inventory.SetActive(false);
+        gameMenu.SetActive(false);
         StartCoroutine("coolWeapons");
     }
     IEnumerator disableMoveAndShoot()
     {
         playerMovement.enabled = false;
         playerShooting.enabled = false;
+        playerRB.velocity = Vector2.zero;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
 
         playerShooting.enabled = true;
         playerMovement.enabled = true;
@@ -121,11 +124,17 @@ public class GlobalsManager : MonoBehaviour
             GlobalsManager.Instance.shieldIsRecharging = false;
         }
     }
+    IEnumerator largeCooldown()
+    {
+        yield return new WaitForSeconds(12f);
+        StartCoroutine("rechargeShields");
+        GlobalsManager.Instance.shieldIsRecharging = true;
+    }
     IEnumerator coolDown()
     {
-        GlobalsManager.Instance.shieldIsRecharging = true;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         StartCoroutine("rechargeShields");
+        GlobalsManager.Instance.shieldIsRecharging = true;
     }
     IEnumerator weaponsCooldown()
     {
@@ -151,7 +160,7 @@ public class GlobalsManager : MonoBehaviour
     IEnumerator overheatedCool()
     {
         GlobalsManager.Instance.weaponHeat -= 1;
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.03f);
         if (GlobalsManager.Instance.weaponHeat <= 30)
         {
             GlobalsManager.Instance.weaponsOverheated = false;
@@ -165,13 +174,24 @@ public class GlobalsManager : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I)) {
+        if (gameMenu.activeSelf)
+        {
+            Time.timeScale = 0;
+        } else
+        {
+            Time.timeScale = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.E)) {
             Inventory.SetActive(!Inventory.activeSelf);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameMenu.SetActive(!gameMenu.activeSelf);
         }
         if (GlobalsManager.Instance.cloakActive == true)
         {
-            GlobalsManager.Instance.spottingrange = 15f;
-            GlobalsManager.Instance.sniperRange = 20f;
+            GlobalsManager.Instance.spottingrange = 10f;
+            GlobalsManager.Instance.sniperRange = 15f;
         }
         else
         {
@@ -192,9 +212,17 @@ public class GlobalsManager : MonoBehaviour
             GlobalsManager.Instance.weaponsOverheated = true;
             GlobalsManager.Instance.StopCoroutine("coolWeapons");
             GlobalsManager.Instance.StartCoroutine("weaponsCooldown");
-        } else if (GlobalsManager.Instance.weaponHeat < 100 && GlobalsManager.Instance.weaponsOverheated == false && GlobalsManager.Instance.weaponHeat > 0)
+        } 
+    }
+    private void LateUpdate()
+    {
+        if (playerHP <= 0)
         {
-            
+            SceneManager.LoadScene(6);
+        }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            playerHP = 1000;
         }
     }
 }

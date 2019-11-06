@@ -32,14 +32,26 @@ public class enemyHit : MonoBehaviour
                 if (GlobalsManager.Instance.shieldsDown == true)
                 {
                     GlobalsManager.Instance.playerHP -= 10;
+                    GlobalsManager.Instance.StartCoroutine("largeCooldown");
+                    GlobalsManager.Instance.StopCoroutine("rechargeShields");
+                    GlobalsManager.Instance.StopCoroutine("coolDown");
+                    GlobalsManager.Instance.shieldIsRecharging = true;
                 }
                 else if (GlobalsManager.Instance.leftshieldEquipped == true && GlobalsManager.Instance.rightshieldEquipped == true && GlobalsManager.Instance.shieldsDown == false)
                 {
                     GlobalsManager.Instance.Shields -= 10;
+                    GlobalsManager.Instance.StartCoroutine("largeCooldown");
+                    GlobalsManager.Instance.StopCoroutine("coolDown");
+                    GlobalsManager.Instance.StopCoroutine("rechargeShields");
+                    GlobalsManager.Instance.shieldIsRecharging = true;
                 }
                 else if (GlobalsManager.Instance.leftshieldEquipped == true || GlobalsManager.Instance.rightshieldEquipped == true && GlobalsManager.Instance.shieldsDown == false)
                 {
                     GlobalsManager.Instance.Shields -= 20;
+                    GlobalsManager.Instance.StartCoroutine("largeCooldown");
+                    GlobalsManager.Instance.StopCoroutine("rechargeShields");
+                    GlobalsManager.Instance.StopCoroutine("coolDown");
+                    GlobalsManager.Instance.shieldIsRecharging = true;
                 }
                 Destroy(gameObject);
             }

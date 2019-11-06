@@ -16,7 +16,6 @@ public class ShipLayout : MonoBehaviour
 
     void Update()
     {
-
         if (GlobalsManager.Instance.mg1Equipped == true)
         {
             machineGun1.SetActive(true);
@@ -118,6 +117,30 @@ public class ShipLayout : MonoBehaviour
         else
         {
             shieldSprite.SetActive(false);
+        }
+    }
+    void LateUpdate()
+    {
+        if (GlobalsManager.Instance.cloakActive == true)
+        {
+            machineGun1.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            machineGun2.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            shotGun.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            Cannon.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            Cloak.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            tractorBeam.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            shield1.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+            shield2.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 0.4f);
+        } else
+        {
+            machineGun1.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            machineGun2.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            shotGun.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            Cannon.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f,1f);
+            Cloak.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            tractorBeam.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            shield1.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
+            shield2.GetComponent<SpriteRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1f);
         }
     }
 

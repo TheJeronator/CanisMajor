@@ -40,7 +40,7 @@ public class transmissionController : MonoBehaviour
                 transmissionComplete = false;
                 StartCoroutine("Wait");
                 transmissions.clip = transmissionList[1];
-                transmissions.volume = 0.5f;
+                transmissions.volume = 0.3f;
                 transmissionScreen.sprite = transmissionSprites[1];
             }
         }
@@ -52,7 +52,7 @@ public class transmissionController : MonoBehaviour
                 Debug.Log("Transmission incoming...");
                 StartCoroutine("Wait");
                 transmissions.clip = transmissionList[2];
-                transmissions.volume = 0.6f;
+                transmissions.volume = 0.3f;
                 transmissionScreen.sprite = transmissionSprites[2];
             }
         }
@@ -66,7 +66,7 @@ public class transmissionController : MonoBehaviour
                     Debug.Log("Transmission incoming...");
                     StartCoroutine("Wait");
                     transmissions.clip = transmissionList[3];
-                    transmissions.volume = 0.6f;
+                    transmissions.volume = 0.3f;
                     transmissionScreen.sprite = transmissionSprites[3];
                     perimeterTurretTransmission = true;
                 }
@@ -82,7 +82,7 @@ public class transmissionController : MonoBehaviour
                     Debug.Log("Transmission incoming...");
                     StartCoroutine("Wait");
                     transmissions.clip = transmissionList[4];
-                    transmissions.volume = 0.6f;
+                    transmissions.volume = 0.3f;
                     transmissionScreen.sprite = transmissionSprites[4];
                     controlTowerTransmission = true;
                 }
@@ -97,7 +97,7 @@ public class transmissionController : MonoBehaviour
                 Debug.Log("Transmission incoming...");
                 StartCoroutine("Wait");
                 transmissions.clip = transmissionList[5];
-                transmissions.volume = 0.6f;
+                transmissions.volume = 0.3f;
                 transmissionScreen.sprite = transmissionSprites[5];
                 finaltransmission = true;
             }

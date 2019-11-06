@@ -20,6 +20,10 @@ public class enemyAim : MonoBehaviour
     }
     void Update()
     {
+        if (GlobalsManager.Instance.playerHP <= 0)
+        {
+            Destroy(this);
+        }
         if (Vector3.Distance(transform.position, player.position) < GlobalsManager.Instance.spottingrange)
         {
             Vector2 lookDir = player.position - transform.position;
